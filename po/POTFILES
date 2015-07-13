@@ -1,0 +1,17 @@
+     .././src/bin/main.c \
+     .././src/bin/main_window.c \
+     .././src/bin/main_window.h \
+     .././src/bin/playbacks_view.c \
+     .././src/bin/playbacks_view.h \
+     .././src/bin/sinks_view.c \
+     .././src/bin/sinks_view.h \
+     .././src/bin/sources_view.c \
+     .././src/bin/sources_view.h \
+     .././src/lib/common.c \
+     .././src/lib/common.h \
+     .././src/lib/epulse.c \
+     .././src/lib/epulse.h \
+     .././src/lib/epulse_ml.c \
+     .././src/lib/translation.h \
+     .././src/module/e_mod_main.c \
+     .././src/module/e_mod_main.h

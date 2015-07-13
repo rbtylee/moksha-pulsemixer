@@ -1,0 +1,83 @@
+# Serbian translation for enlightenment
+# Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
+# This file is distributed under the same license as the enlightenment package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
+# Саша Петровић <salepetronije@gmail.com>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enlightenment\n"
+"Report-Msgid-Bugs-To: flavio.ceolin@gmail.com\n"
+"POT-Creation-Date: 2015-02-05 11:32+0900\n"
+"PO-Revision-Date: 2015-01-31 10:27+0100\n"
+"Last-Translator: Саша Петровић <salepetronije@gmail.com>\n"
+"Language-Team: српски <xfce4@xfce4.org>\n"
+"Language: sr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2014-10-21 05:59+0000\n"
+"X-Generator: Gtranslator 2.91.6\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: src/bin/main_window.c:85
+msgid "Efl Volume Control"
+msgstr "Управљање звуком Ефл-а"
+
+#: src/bin/main_window.c:125
+msgid "Playback"
+msgstr "Извођење"
+
+#: src/bin/main_window.c:128
+msgid "Outputs"
+msgstr "Излази"
+
+#: src/bin/main_window.c:131
+msgid "Inputs"
+msgstr "Улази"
+
+#: src/bin/playbacks_view.c:305 src/bin/sinks_view.c:263
+#: src/module/e_mod_main.c:414
+msgid "Mute"
+msgstr "Искључи звук"
+
+#: src/bin/playbacks_view.c:306 src/bin/sinks_view.c:264
+msgid "Unmute"
+msgstr "Укључи звук"
+
+#: src/module/e_mod_main.c:107
+msgid "New volume"
+msgstr "Нова гласноћа"
+
+#: src/module/e_mod_main.c:120
+msgid "EPulse"
+msgstr "Е-било"
+
+#: src/module/e_mod_main.c:123
+msgid "Volume changed"
+msgstr "Гласноћа је промењена"
+
+#: src/module/e_mod_main.c:219
+msgid "Increase Volume"
+msgstr "Појачај гласноћу"
+
+#: src/module/e_mod_main.c:227
+msgid "Decrease Volume"
+msgstr "Смањи јачину звука"
+
+#: src/module/e_mod_main.c:235
+msgid "Mute volume"
+msgstr "Искључи звук"
+
+#: src/module/e_mod_main.c:248
+msgid "Volume Increase"
+msgstr "Појачање звука"
+
+#: src/module/e_mod_main.c:255 src/module/e_mod_main.c:262
+msgid "Volume Mute"
+msgstr "Звук је искључен"
+
+#: src/module/e_mod_main.c:455
+msgid "Advanced"
+msgstr "Напредно"

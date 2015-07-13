@@ -1,0 +1,50 @@
+# Themes are compiled with edje_cc given by user (cross-compile)
+EDJE_CC = @edje_cc@
+EDJE_FLAGS_VERBOSE_ =
+EDJE_FLAGS_VERBOSE_0 =
+EDJE_FLAGS_VERBOSE_1 = -v
+EDJE_FLAGS = $(EDJE_FLAGS_VERBOSE_$(V)) -id $(srcdir)/data/themes/images -fd $(srcdir)/data/themes/fonts
+
+filesdir = $(pkgdatadir)/data/themes
+files_DATA = data/themes/default.edj
+
+modulethemedir = @pkgdir@
+moduletheme_DATA = data/themes/mixer.edj \
+		data/xml/module.desktop
+
+AM_V_EDJ = $(am__v_EDJ_$(V))
+am__v_EDJ_ = $(am__v_EDJ_$(AM_DEFAULT_VERBOSITY))
+am__v_EDJ_0 = @echo "  EDJ   " $@;
+
+THEME_IMAGES =
+	inset_round_hilight.png \
+	inset_round_shading.png \
+	inset_round_shadow.png \
+	led_dot_white.png \
+	module_icon.png \
+	speaker.png
+
+THEME_FONTS =
+
+THEMES = \
+	data/themes/default.edc \
+	data/themes/playbacks.edc
+
+THEMES_MODULE = \
+	data/themes/mixer.edc
+
+EXTRA_DIST += $(THEMES) $(THEME_IMAGES) $(THEME_FONTS)
+
+data/themes/mixer.edj: $(THEMES_MODULE) $(THEME_IMAGES) $(THEME_FONTS)
+	$(MKDIR_P) $(top_builddir)/data/themes
+	$(AM_V_EDJ)$(EDJE_CC) $(EDJE_FLAGS) \
+	$< $(top_builddir)/$@
+
+
+data/themes/default.edj: $(THEMES) $(THEME_IMAGES) $(THEME_FONTS)
+	$(MKDIR_P) $(top_builddir)/data/themes
+	$(AM_V_EDJ)$(EDJE_CC) $(EDJE_FLAGS) \
+	$< $(top_builddir)/$@
+
+clean-local:
+	rm -f $(builddir)/data/themes/default.edj $(builddir)/data/themes/e-module-pulse-mixer.edj

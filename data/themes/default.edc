@@ -1,0 +1,6 @@
+collections {
+
+#include "main.edc"
+#include "naviframe.edc"
+#include "playbacks.edc"
+}

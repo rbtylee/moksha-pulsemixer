@@ -1,0 +1,7 @@
+- i18n
+- show all channels of a stream ? (stand alone application)
+- Improve (a lot) UI 
+- Building inside E
+- Now the way the information is been passed using Ecore_Event is far from optimal because
+  almost all the data is been replicated. It'll be great organize it.
+- Put the same license used by E on it
