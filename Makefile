@@ -86,7 +86,7 @@ DIST_COMMON = $(srcdir)/Makefile_Theme.am $(srcdir)/Makefile.in \
 	$(srcdir)/Makefile.am $(top_srcdir)/configure \
 	$(am__configure_deps) $(srcdir)/config.h.in \
 	$(top_srcdir)/data/xml/module.desktop.in depcomp ABOUT-NLS \
-	AUTHORS COPYING INSTALL NEWS README TODO compile config.guess \
+	AUTHORS COPYING INSTALL NEWS TODO compile config.guess \
 	config.rpath config.sub install-sh missing ltmain.sh
 subdir = .
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
@@ -295,14 +295,14 @@ distuninstallcheck_listfiles = find . -type f -print
 am__distuninstallcheck_listfiles = $(distuninstallcheck_listfiles) \
   | sed 's|^\./|$(prefix)/|' | grep -v '$(infodir)/dir$$'
 distcleancheck_listfiles = find . -type f -print
-ACLOCAL = ${SHELL} /home/jeff/git/epulse-e17/missing aclocal-1.14
+ACLOCAL = ${SHELL} /media/jeff/Storage/GitHub/moksha-pulsemixer/missing aclocal-1.14
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 0
 AR = ar
-AUTOCONF = ${SHELL} /home/jeff/git/epulse-e17/missing autoconf
-AUTOHEADER = ${SHELL} /home/jeff/git/epulse-e17/missing autoheader
-AUTOMAKE = ${SHELL} /home/jeff/git/epulse-e17/missing automake-1.14
-AWK = mawk
+AUTOCONF = ${SHELL} /media/jeff/Storage/GitHub/moksha-pulsemixer/missing autoconf
+AUTOHEADER = ${SHELL} /media/jeff/Storage/GitHub/moksha-pulsemixer/missing autoheader
+AUTOMAKE = ${SHELL} /media/jeff/Storage/GitHub/moksha-pulsemixer/missing automake-1.14
+AWK = gawk
 CC = gcc
 CCDEPMODE = depmode=gcc3
 CFLAGS = -g -O2  -Wall -Wextra -Wshadow -fvisibility=hidden
@@ -321,13 +321,13 @@ DUMPBIN =
 ECHO_C = 
 ECHO_N = -n
 ECHO_T = 
-EFL_CFLAGS = -pthread -D_REENTRANT -I/usr/include/elementary-1 -I/usr/include/efl-1 -I/usr/include/ecore-fb-1 -I/usr/include/ecore-x-1 -I/usr/include/eina-1 -I/usr/include/eina-1/eina -I/usr/include/eet-1 -I/usr/include/evas-1 -I/usr/include/ecore-1 -I/usr/include/ecore-evas-1 -I/usr/include/ecore-file-1 -I/usr/include/ecore-input-1 -I/usr/include/edje-1 -I/usr/include/eo-1 -I/usr/include/ethumb-client-1 -I/usr/include/emotion-1 -I/usr/include/ecore-imf-1 -I/usr/include/ecore-con-1 -I/usr/include/eio-1 -I/usr/include/eldbus-1 -I/usr/include/efreet-1 -I/usr/include/glib-2.0 -I/usr/lib/i386-linux-gnu/glib-2.0/include -I/usr/include/libpng12 -I/usr/include/harfbuzz -I/usr/include/fribidi -I/usr/include/freetype2 -I/usr//include/luajit-2.0 -I/usr/include/ecore-input-evas-1 -I/usr/include/ecore-audio-1 -I/usr/include/ephysics-1 -I/usr/include/embryo-1 -I/usr/include/ecore-imf-evas-1 -I/usr/include/bullet -I/usr/include/ethumb-1 -I/usr/include/dbus-1.0 -I/usr/lib/i386-linux-gnu/dbus-1.0/include -I/usr/include/eeze-1 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid  
+EFL_CFLAGS = -pthread -D_REENTRANT -I/usr/include/elementary-1 -I/usr/include/elocation-1 -I/usr/include/efl-1 -I/usr/include/ecore-fb-1 -I/usr/include/ecore-x-1 -I/usr/include/eina-1 -I/usr/include/eina-1/eina -I/usr/include/eet-1 -I/usr/include/evas-1 -I/usr/include/ecore-1 -I/usr/include/ecore-evas-1 -I/usr/include/ecore-file-1 -I/usr/include/ecore-input-1 -I/usr/include/edje-1 -I/usr/include/eo-1 -I/usr/include/ethumb-client-1 -I/usr/include/emotion-1 -I/usr/include/ecore-imf-1 -I/usr/include/ecore-con-1 -I/usr/include/eio-1 -I/usr/include/eldbus-1 -I/usr/include/efreet-1 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/emile-1 -I/usr/include/libpng12 -I/usr/include/harfbuzz -I/usr/include/fribidi -I/usr/include/freetype2 -I/usr/include/ector-1 -I/usr//include/luajit-2.0 -I/usr/include/ecore-input-evas-1 -I/usr/include/ecore-audio-1 -I/usr/include/ephysics-1 -I/usr/include/embryo-1 -I/usr/include/ecore-imf-evas-1 -I/usr/include/bullet -I/usr/include/ethumb-1 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/eeze-1 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid  
 EFL_LIBS = -lelementary -lefl -leina -lpthread -levas -lecore_evas -lecore_input -ledje -leo -lethumb_client -lemotion -lecore_imf -lecore_con -leldbus -lefreet -lefreet_mime -lefreet_trash -leio -ldl -lm -leet -lecore -lecore_file  
 EGREP = /bin/grep -E
-ENOTIFY_CFLAGS = -pthread -I/usr/include/e_dbus-1 -I/usr/include/efl-1 -I/usr/include/ecore-1 -I/usr/include/eina-1 -I/usr/include/eina-1/eina -I/usr/include/dbus-1.0 -I/usr/lib/i386-linux-gnu/dbus-1.0/include -I/usr/include/glib-2.0 -I/usr/lib/i386-linux-gnu/glib-2.0/include -I/usr/include/eo-1  
+ENOTIFY_CFLAGS = -pthread -I/usr/include/e_dbus-1 -I/usr/include/efl-1 -I/usr/include/ecore-1 -I/usr/include/eina-1 -I/usr/include/eina-1/eina -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/eo-1  
 ENOTIFY_LIBS = -ledbus -ldbus-1  
 EXEEXT = 
-E_CFLAGS = -DUSE_E_CONFIG_H -pthread -D_REENTRANT -I/usr/include/enlightenment -I/usr/include/efl-1 -I/usr/include/evas-1 -I/usr/include/ecore-1 -I/usr/include/ecore-x-1 -I/usr/include/ecore-evas-1 -I/usr/include/ecore-con-1 -I/usr/include/ecore-ipc-1 -I/usr/include/ecore-file-1 -I/usr/include/eet-1 -I/usr/include/edje-1 -I/usr/include/efreet-1 -I/usr/include/eina-1 -I/usr/include/eina-1/eina -I/usr/include/dbus-1.0 -I/usr/lib/i386-linux-gnu/dbus-1.0/include -I/usr/include/e_dbus-1 -I/usr/include/eio-1 -I/usr/include/eeze-1 -I/usr/include/elementary-1 -I/usr/include/emotion-1 -I/usr/include/libpng12 -I/usr/include/harfbuzz -I/usr/include/fribidi -I/usr/include/freetype2 -I/usr/include/eo-1 -I/usr//include/luajit-2.0 -I/usr/include/glib-2.0 -I/usr/lib/i386-linux-gnu/glib-2.0/include -I/usr/include/ecore-input-1 -I/usr/include/ecore-input-evas-1 -I/usr/include/ecore-audio-1 -I/usr/include/ephysics-1 -I/usr/include/embryo-1 -I/usr/include/ecore-imf-evas-1 -I/usr/include/ecore-imf-1 -I/usr/include/bullet -I/usr/include/eldbus-1 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/ecore-fb-1 -I/usr/include/ethumb-client-1 -I/usr/include/ethumb-1  
+E_CFLAGS = -DUSE_E_CONFIG_H -pthread -D_REENTRANT -I/usr/include/enlightenment -I/usr/include/efl-1 -I/usr/include/evas-1 -I/usr/include/ecore-1 -I/usr/include/ecore-x-1 -I/usr/include/ecore-evas-1 -I/usr/include/ecore-con-1 -I/usr/include/ecore-ipc-1 -I/usr/include/ecore-file-1 -I/usr/include/eet-1 -I/usr/include/edje-1 -I/usr/include/efreet-1 -I/usr/include/eina-1 -I/usr/include/eina-1/eina -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/e_dbus-1 -I/usr/include/eio-1 -I/usr/include/eeze-1 -I/usr/include/elementary-1 -I/usr/include/emotion-1 -I/usr/include/libpng12 -I/usr/include/harfbuzz -I/usr/include/fribidi -I/usr/include/freetype2 -I/usr/include/ector-1 -I/usr/include/emile-1 -I/usr/include/eo-1 -I/usr//include/luajit-2.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/ecore-input-1 -I/usr/include/ecore-input-evas-1 -I/usr/include/ecore-audio-1 -I/usr/include/ephysics-1 -I/usr/include/embryo-1 -I/usr/include/ecore-imf-evas-1 -I/usr/include/ecore-imf-1 -I/usr/include/bullet -I/usr/include/eldbus-1 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/elocation-1 -I/usr/include/ecore-fb-1 -I/usr/include/ethumb-client-1 -I/usr/include/ethumb-1  
 E_LIBS = -lecore_x -lecore_ipc -lehal -ledbus -ldbus-1 -leukit -leeze -lelementary -lefl -leina -lpthread -leet -levas -lecore -lecore_evas -lecore_file -lecore_input -ledje -leo -lethumb_client -lecore_imf -lecore_con -leldbus -lefreet -lefreet_mime -lefreet_trash -leio -ldl -lm -lemotion  
 FGREP = /bin/grep -F
 GETTEXT_MACRO_VERSION = 0.18
@@ -341,7 +341,7 @@ INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
 INTLLIBS = 
 INTL_MACOSX_LIBS = 
-LD = /usr/bin/ld -m elf_i386
+LD = /usr/bin/ld -m elf_x86_64
 LDFLAGS = 
 LIBICONV = -liconv
 LIBINTL = 
@@ -353,7 +353,7 @@ LN_S = ln -s
 LTLIBICONV = -liconv
 LTLIBINTL = 
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /home/jeff/git/epulse-e17/missing makeinfo
+MAKEINFO = ${SHELL} /media/jeff/Storage/GitHub/moksha-pulsemixer/missing makeinfo
 MANIFEST_TOOL = :
 MKDIR_P = /bin/mkdir -p
 MODULE_ARCH = linux-gnu-x86_64-0.17.6
@@ -390,10 +390,10 @@ VERSION = 0.1
 XGETTEXT = /usr/bin/xgettext
 XGETTEXT_015 = /usr/bin/xgettext
 XGETTEXT_EXTRA_OPTIONS = 
-abs_builddir = /home/jeff/git/epulse-e17
-abs_srcdir = /home/jeff/git/epulse-e17
-abs_top_builddir = /home/jeff/git/epulse-e17
-abs_top_srcdir = /home/jeff/git/epulse-e17
+abs_builddir = /media/jeff/Storage/GitHub/moksha-pulsemixer
+abs_srcdir = /media/jeff/Storage/GitHub/moksha-pulsemixer
+abs_top_builddir = /media/jeff/Storage/GitHub/moksha-pulsemixer
+abs_top_srcdir = /media/jeff/Storage/GitHub/moksha-pulsemixer
 ac_ct_AR = ar
 ac_ct_CC = gcc
 ac_ct_CXX = g++
@@ -424,7 +424,7 @@ host_vendor = unknown
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/jeff/git/epulse-e17/install-sh
+install_sh = ${SHELL} /media/jeff/Storage/GitHub/moksha-pulsemixer/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -433,8 +433,8 @@ mandir = ${datarootdir}/man
 mkdir_p = /bin/mkdir -p
 oldincludedir = /usr/include
 pdfdir = ${docdir}
-pkgdir = /usr/lib/i386-linux-gnu/enlightenment/modules/epulse
-prefix = /usr/local
+pkgdir = /usr/lib/x86_64-linux-gnu/enlightenment/modules/epulse
+prefix = /usr
 program_transform_name = s,x,x,
 psdir = ${docdir}
 sbindir = ${exec_prefix}/sbin
@@ -452,8 +452,8 @@ AM_CFLAGS = \
 	-DPACKAGE_BIN_DIR=\"$(bindir)\" \
 	-DPACKAGE_LIB_DIR=\"$(libdir)\" \
 	-I$(top_srcdir)/src/lib/ \
-	-pthread -D_REENTRANT -I/usr/include/elementary-1 -I/usr/include/efl-1 -I/usr/include/ecore-fb-1 -I/usr/include/ecore-x-1 -I/usr/include/eina-1 -I/usr/include/eina-1/eina -I/usr/include/eet-1 -I/usr/include/evas-1 -I/usr/include/ecore-1 -I/usr/include/ecore-evas-1 -I/usr/include/ecore-file-1 -I/usr/include/ecore-input-1 -I/usr/include/edje-1 -I/usr/include/eo-1 -I/usr/include/ethumb-client-1 -I/usr/include/emotion-1 -I/usr/include/ecore-imf-1 -I/usr/include/ecore-con-1 -I/usr/include/eio-1 -I/usr/include/eldbus-1 -I/usr/include/efreet-1 -I/usr/include/glib-2.0 -I/usr/lib/i386-linux-gnu/glib-2.0/include -I/usr/include/libpng12 -I/usr/include/harfbuzz -I/usr/include/fribidi -I/usr/include/freetype2 -I/usr//include/luajit-2.0 -I/usr/include/ecore-input-evas-1 -I/usr/include/ecore-audio-1 -I/usr/include/ephysics-1 -I/usr/include/embryo-1 -I/usr/include/ecore-imf-evas-1 -I/usr/include/bullet -I/usr/include/ethumb-1 -I/usr/include/dbus-1.0 -I/usr/lib/i386-linux-gnu/dbus-1.0/include -I/usr/include/eeze-1 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid   \
-	-DUSE_E_CONFIG_H -pthread -D_REENTRANT -I/usr/include/enlightenment -I/usr/include/efl-1 -I/usr/include/evas-1 -I/usr/include/ecore-1 -I/usr/include/ecore-x-1 -I/usr/include/ecore-evas-1 -I/usr/include/ecore-con-1 -I/usr/include/ecore-ipc-1 -I/usr/include/ecore-file-1 -I/usr/include/eet-1 -I/usr/include/edje-1 -I/usr/include/efreet-1 -I/usr/include/eina-1 -I/usr/include/eina-1/eina -I/usr/include/dbus-1.0 -I/usr/lib/i386-linux-gnu/dbus-1.0/include -I/usr/include/e_dbus-1 -I/usr/include/eio-1 -I/usr/include/eeze-1 -I/usr/include/elementary-1 -I/usr/include/emotion-1 -I/usr/include/libpng12 -I/usr/include/harfbuzz -I/usr/include/fribidi -I/usr/include/freetype2 -I/usr/include/eo-1 -I/usr//include/luajit-2.0 -I/usr/include/glib-2.0 -I/usr/lib/i386-linux-gnu/glib-2.0/include -I/usr/include/ecore-input-1 -I/usr/include/ecore-input-evas-1 -I/usr/include/ecore-audio-1 -I/usr/include/ephysics-1 -I/usr/include/embryo-1 -I/usr/include/ecore-imf-evas-1 -I/usr/include/ecore-imf-1 -I/usr/include/bullet -I/usr/include/eldbus-1 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/ecore-fb-1 -I/usr/include/ethumb-client-1 -I/usr/include/ethumb-1   \
+	-pthread -D_REENTRANT -I/usr/include/elementary-1 -I/usr/include/elocation-1 -I/usr/include/efl-1 -I/usr/include/ecore-fb-1 -I/usr/include/ecore-x-1 -I/usr/include/eina-1 -I/usr/include/eina-1/eina -I/usr/include/eet-1 -I/usr/include/evas-1 -I/usr/include/ecore-1 -I/usr/include/ecore-evas-1 -I/usr/include/ecore-file-1 -I/usr/include/ecore-input-1 -I/usr/include/edje-1 -I/usr/include/eo-1 -I/usr/include/ethumb-client-1 -I/usr/include/emotion-1 -I/usr/include/ecore-imf-1 -I/usr/include/ecore-con-1 -I/usr/include/eio-1 -I/usr/include/eldbus-1 -I/usr/include/efreet-1 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/emile-1 -I/usr/include/libpng12 -I/usr/include/harfbuzz -I/usr/include/fribidi -I/usr/include/freetype2 -I/usr/include/ector-1 -I/usr//include/luajit-2.0 -I/usr/include/ecore-input-evas-1 -I/usr/include/ecore-audio-1 -I/usr/include/ephysics-1 -I/usr/include/embryo-1 -I/usr/include/ecore-imf-evas-1 -I/usr/include/bullet -I/usr/include/ethumb-1 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/eeze-1 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid   \
+	-DUSE_E_CONFIG_H -pthread -D_REENTRANT -I/usr/include/enlightenment -I/usr/include/efl-1 -I/usr/include/evas-1 -I/usr/include/ecore-1 -I/usr/include/ecore-x-1 -I/usr/include/ecore-evas-1 -I/usr/include/ecore-con-1 -I/usr/include/ecore-ipc-1 -I/usr/include/ecore-file-1 -I/usr/include/eet-1 -I/usr/include/edje-1 -I/usr/include/efreet-1 -I/usr/include/eina-1 -I/usr/include/eina-1/eina -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/e_dbus-1 -I/usr/include/eio-1 -I/usr/include/eeze-1 -I/usr/include/elementary-1 -I/usr/include/emotion-1 -I/usr/include/libpng12 -I/usr/include/harfbuzz -I/usr/include/fribidi -I/usr/include/freetype2 -I/usr/include/ector-1 -I/usr/include/emile-1 -I/usr/include/eo-1 -I/usr//include/luajit-2.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/ecore-input-1 -I/usr/include/ecore-input-evas-1 -I/usr/include/ecore-audio-1 -I/usr/include/ephysics-1 -I/usr/include/embryo-1 -I/usr/include/ecore-imf-evas-1 -I/usr/include/ecore-imf-1 -I/usr/include/bullet -I/usr/include/eldbus-1 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/uuid -I/usr/include/elocation-1 -I/usr/include/ecore-fb-1 -I/usr/include/ethumb-client-1 -I/usr/include/ethumb-1   \
 	-D_REENTRANT  
 
 MAINTAINERCLEANFILES = \
@@ -520,7 +520,7 @@ EDJE_FLAGS_VERBOSE_1 = -v
 EDJE_FLAGS = $(EDJE_FLAGS_VERBOSE_$(V)) -id $(srcdir)/data/themes/images -fd $(srcdir)/data/themes/fonts
 filesdir = $(pkgdatadir)/data/themes
 files_DATA = data/themes/default.edj
-modulethemedir = /usr/lib/i386-linux-gnu/enlightenment/modules/epulse
+modulethemedir = /usr/lib/x86_64-linux-gnu/enlightenment/modules/epulse
 moduletheme_DATA = data/themes/mixer.edj \
 		data/xml/module.desktop
 

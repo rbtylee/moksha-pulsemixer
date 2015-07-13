@@ -86,7 +86,7 @@ DIST_COMMON = $(srcdir)/Makefile_Theme.am $(srcdir)/Makefile.in \
 	$(srcdir)/Makefile.am $(top_srcdir)/configure \
 	$(am__configure_deps) $(srcdir)/config.h.in \
 	$(top_srcdir)/data/xml/module.desktop.in depcomp ABOUT-NLS \
-	AUTHORS COPYING INSTALL NEWS README TODO compile config.guess \
+	AUTHORS COPYING INSTALL NEWS TODO compile config.guess \
 	config.rpath config.sub install-sh missing ltmain.sh
 subdir = .
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4

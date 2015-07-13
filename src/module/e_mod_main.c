@@ -4,8 +4,8 @@
 #include <Eina.h>
 #include <epulse.h>
 #include "e_mod_main.h"
-#if E_VERSION_MAJOR < 18 && defined HAVE_ENOTIFY
-#include "E_Notify.h"
+#ifdef HAVE_ENOTIFY
+#include <E_Notify.h>
 #endif
 
 #define VOLUME_STEP (PA_VOLUME_NORM / BASE_VOLUME_STEP)
@@ -99,6 +99,9 @@ _notify_cb(void *data EINA_UNUSED, unsigned int id)
 static void
 _notify(const int val)
 {
+#ifdef HAVE_ENOTIFY
+   E_Notification *n;
+   
    if (val > 100 || val < 0)
      return;
 
@@ -118,35 +121,10 @@ _notify(const int val)
    else
      icon = "audio-volume-high";
 
-#if E_VERSION_MAJOR < 18
-#ifdef HAVE_ENOTIFY
-   E_Notification *n;
-
-   n = e_notification_full_new
-   (
-     _("EPulse"),
-     0,
-     icon,
-     _("Volume changed"),
-     buf,
-     2000
-   );
+   n = e_notification_full_new(_("EPulse"), 0, icon, _("Volume Changed"), buf, 2000);
+   e_notification_replaces_id_set(n, EINA_TRUE);
    e_notification_send(n, NULL, NULL);
    e_notification_unref(n);
-   n = NULL;
-#endif
-#else
-   E_Notification_Notify n;
-
-   memset(&n, 0, sizeof(E_Notification_Notify));
-
-   n.app_name = _("EPulse");
-   n.replaces_id = mixer_context->notification_id;
-   n.icon.icon = icon;
-   n.summary = _("Volume changed");
-   n.body = buf;
-   n.timeout = 2000;
-   e_notification_client_send(&n, _notify_cb, NULL);
 #endif
 }
 
@@ -573,8 +551,10 @@ _gc_init(E_Gadcon *gc, const char *name, const char *id, const char *style)
    inst = E_NEW(Instance, 1);
 
    inst->gadget = edje_object_add(gc->evas);
-   edje_object_file_set(inst->gadget, mixer_context->theme,
-                        "e/modules/mixer/main");
+   /*edje_object_file_set(inst->gadget, mixer_context->theme,
+                        "e/modules/mixer/main");*/
+   e_theme_edje_object_set(inst->gadget, "base/theme/modules/mixer",
+                           "e/modules/mixer/main");
 
    gcc = e_gadcon_client_new(gc, name, id, style, inst->gadget);
    gcc->data = inst;
@@ -822,6 +802,10 @@ _sink_changed_cb(void *data EINA_UNUSED, int type EINA_UNUSED,
          mixer_context->theme = strdup(buf);
       }
 
+/*#ifdef HAVE_ENOTIFY
+   e_notification_init();
+#endif*/
+
     e_gadcon_provider_register(&_gadcon_class);
     _actions_register();
 
@@ -854,6 +838,10 @@ _sink_changed_cb(void *data EINA_UNUSED, int type EINA_UNUSED,
 
         E_FREE(mixer_context);
      }
+
+/*#ifdef HAVE_ENOTIFY
+   e_notification_shutdown();
+#endif*/
 
    epulse_common_shutdown();
    epulse_shutdown();

@@ -1,1 +1,1828 @@
-# dummy
+src/bin/sinks_view.o: src/bin/sinks_view.c /usr/include/stdc-predef.h \
+ src/bin/sinks_view.h src/lib/common.h /usr/include/ecore-1/Ecore.h \
+ /usr/include/efl-1/Efl_Config.h /usr/include/eina-1/Eina.h \
+ /usr/include/eina-1/eina_config.h /usr/include/eina-1/eina/eina_types.h \
+ /usr/include/eina-1/eina/eina_alloca.h /usr/include/alloca.h \
+ /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+ /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stddef.h \
+ /usr/include/eina-1/eina/eina_main.h \
+ /usr/include/eina-1/eina/eina_types.h /usr/include/eina-1/eina/eina_fp.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/wchar.h \
+ /usr/include/eina-1/eina/eina_inline_f32p32.x /usr/include/stdlib.h \
+ /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h /usr/include/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+ /usr/include/x86_64-linux-gnu/bits/byteswap-16.h /usr/include/xlocale.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h /usr/include/time.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/sigset.h \
+ /usr/include/x86_64-linux-gnu/bits/time.h \
+ /usr/include/x86_64-linux-gnu/bits/select2.h \
+ /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+ /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h \
+ /usr/include/eina-1/eina/eina_inline_f16p16.x \
+ /usr/include/eina-1/eina/eina_inline_f8p24.x \
+ /usr/include/eina-1/eina/eina_inline_fp.x \
+ /usr/include/eina-1/eina/eina_rectangle.h \
+ /usr/include/eina-1/eina/eina_inline_rectangle.x \
+ /usr/include/eina-1/eina/eina_clist.h \
+ /usr/include/eina-1/eina/eina_inline_clist.x \
+ /usr/include/eina-1/eina/eina_inlist.h \
+ /usr/include/eina-1/eina/eina_iterator.h \
+ /usr/include/eina-1/eina/eina_magic.h \
+ /usr/include/eina-1/eina/eina_error.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdarg.h \
+ /usr/include/eina-1/eina/eina_accessor.h \
+ /usr/include/eina-1/eina/eina_inline_inlist.x \
+ /usr/include/eina-1/eina/eina_file.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed/limits.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed/syslimits.h \
+ /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+ /usr/include/linux/limits.h \
+ /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/timex.h \
+ /usr/include/x86_64-linux-gnu/sys/stat.h \
+ /usr/include/x86_64-linux-gnu/bits/stat.h \
+ /usr/include/eina-1/eina/eina_array.h \
+ /usr/include/eina-1/eina/eina_inline_array.x /usr/include/stdio.h \
+ /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio2.h \
+ /usr/include/eina-1/eina/eina_tmpstr.h \
+ /usr/include/eina-1/eina/eina_list.h \
+ /usr/include/eina-1/eina/eina_inline_list.x \
+ /usr/include/eina-1/eina/eina_hash.h \
+ /usr/include/eina-1/eina/eina_inline_hash.x \
+ /usr/include/eina-1/eina/eina_trash.h \
+ /usr/include/eina-1/eina/eina_inline_trash.x \
+ /usr/include/eina-1/eina/eina_lalloc.h \
+ /usr/include/eina-1/eina/eina_module.h \
+ /usr/include/eina-1/eina/eina_mempool.h \
+ /usr/include/eina-1/eina/eina_module.h \
+ /usr/include/eina-1/eina/eina_inline_mempool.x /usr/include/string.h \
+ /usr/include/x86_64-linux-gnu/bits/string.h \
+ /usr/include/x86_64-linux-gnu/bits/string2.h \
+ /usr/include/x86_64-linux-gnu/bits/string3.h \
+ /usr/include/eina-1/eina/eina_error.h \
+ /usr/include/eina-1/eina/eina_log.h \
+ /usr/include/eina-1/eina/eina_inline_log.x \
+ /usr/include/eina-1/eina/eina_inarray.h \
+ /usr/include/eina-1/eina/eina_array.h \
+ /usr/include/eina-1/eina/eina_binshare.h \
+ /usr/include/eina-1/eina/eina_stringshare.h \
+ /usr/include/eina-1/eina/eina_inline_stringshare.x \
+ /usr/include/eina-1/eina/eina_stringshare.h \
+ /usr/include/eina-1/eina/eina_ustringshare.h \
+ /usr/include/eina-1/eina/eina_unicode.h \
+ /usr/include/x86_64-linux-gnu/bits/wchar2.h \
+ /usr/include/eina-1/eina/eina_inline_unicode.x \
+ /usr/include/eina-1/eina/eina_inline_ustringshare.x \
+ /usr/include/eina-1/eina/eina_ustringshare.h \
+ /usr/include/eina-1/eina/eina_magic.h \
+ /usr/include/eina-1/eina/eina_counter.h \
+ /usr/include/eina-1/eina/eina_rbtree.h \
+ /usr/include/eina-1/eina/eina_inline_rbtree.x \
+ /usr/include/eina-1/eina/eina_accessor.h \
+ /usr/include/eina-1/eina/eina_iterator.h \
+ /usr/include/eina-1/eina/eina_benchmark.h \
+ /usr/include/eina-1/eina/eina_convert.h \
+ /usr/include/eina-1/eina/eina_fp.h /usr/include/eina-1/eina/eina_cpu.h \
+ /usr/include/eina-1/eina/eina_inline_cpu.x /usr/include/byteswap.h \
+ /usr/include/eina-1/eina/eina_sched.h \
+ /usr/include/eina-1/eina/eina_tiler.h \
+ /usr/include/eina-1/eina/eina_rectangle.h \
+ /usr/include/eina-1/eina/eina_inline_tiler.x \
+ /usr/include/eina-1/eina/eina_safety_checks.h \
+ /usr/include/eina-1/eina/eina_log.h \
+ /usr/include/eina-1/eina/eina_thread.h \
+ /usr/include/eina-1/eina/eina_hamster.h \
+ /usr/include/eina-1/eina/eina_matrixsparse.h \
+ /usr/include/eina-1/eina/eina_str.h \
+ /usr/include/eina-1/eina/eina_inline_str.x \
+ /usr/include/eina-1/eina/eina_strbuf.h \
+ /usr/include/eina-1/eina/eina_binbuf.h \
+ /usr/include/eina-1/eina/eina_ustrbuf.h \
+ /usr/include/eina-1/eina/eina_unicode.h \
+ /usr/include/eina-1/eina/eina_quadtree.h \
+ /usr/include/eina-1/eina/eina_inlist.h \
+ /usr/include/eina-1/eina/eina_simple_xml_parser.h \
+ /usr/include/eina-1/eina/eina_lock.h \
+ /usr/include/eina-1/eina/eina_main.h \
+ /usr/include/eina-1/eina/eina_inline_lock_posix.x /usr/include/sched.h \
+ /usr/include/x86_64-linux-gnu/bits/sched.h /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/pthread.h /usr/include/x86_64-linux-gnu/bits/setjmp.h \
+ /usr/include/semaphore.h /usr/include/x86_64-linux-gnu/bits/semaphore.h \
+ /usr/include/x86_64-linux-gnu/sys/time.h \
+ /usr/include/eina-1/eina/eina_prefix.h \
+ /usr/include/eina-1/eina/eina_refcount.h \
+ /usr/include/eina-1/eina/eina_mmap.h \
+ /usr/include/eina-1/eina/eina_xattr.h \
+ /usr/include/eina-1/eina/eina_value.h \
+ /usr/include/eina-1/eina/eina_inarray.h \
+ /usr/include/eina-1/eina/eina_list.h \
+ /usr/include/eina-1/eina/eina_hash.h \
+ /usr/include/eina-1/eina/eina_inline_value.x \
+ /usr/include/eina-1/eina/eina_value_util.h \
+ /usr/include/eina-1/eina/eina_value.h \
+ /usr/include/eina-1/eina/eina_inline_value_util.x \
+ /usr/include/inttypes.h /usr/include/math.h \
+ /usr/include/x86_64-linux-gnu/bits/huge_val.h \
+ /usr/include/x86_64-linux-gnu/bits/huge_valf.h \
+ /usr/include/x86_64-linux-gnu/bits/huge_vall.h \
+ /usr/include/x86_64-linux-gnu/bits/inf.h \
+ /usr/include/x86_64-linux-gnu/bits/nan.h \
+ /usr/include/x86_64-linux-gnu/bits/mathdef.h \
+ /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+ /usr/include/x86_64-linux-gnu/bits/mathinline.h \
+ /usr/include/eina-1/eina/eina_cow.h \
+ /usr/include/eina-1/eina/eina_thread_queue.h \
+ /usr/include/eina-1/eina/eina_matrix.h \
+ /usr/include/eina-1/eina/eina_quad.h /usr/include/eo-1/Eo.h \
+ /usr/include/signal.h /usr/include/x86_64-linux-gnu/bits/signum.h \
+ /usr/include/x86_64-linux-gnu/bits/siginfo.h \
+ /usr/include/x86_64-linux-gnu/bits/sigaction.h \
+ /usr/include/x86_64-linux-gnu/bits/sigcontext.h \
+ /usr/include/x86_64-linux-gnu/bits/sigstack.h \
+ /usr/include/x86_64-linux-gnu/sys/ucontext.h \
+ /usr/include/x86_64-linux-gnu/bits/sigthread.h \
+ /usr/include/ecore-1/Ecore_Common.h /usr/include/ecore-1/Ecore_Legacy.h \
+ /usr/include/ecore-1/ecore_poller.eo.legacy.h \
+ /usr/include/ecore-1/ecore_animator.eo.legacy.h \
+ /usr/include/ecore-1/ecore_timer.eo.legacy.h \
+ /usr/include/ecore-1/ecore_idler.eo.legacy.h \
+ /usr/include/ecore-1/ecore_exe.eo.legacy.h \
+ /usr/include/ecore-1/ecore_job.eo.legacy.h /usr/include/evas-1/Evas.h \
+ /usr/include/efl-1/Efl.h /usr/include/evas-1/Evas_Loader.h \
+ /usr/include/emile-1/Emile.h /usr/include/emile-1/emile_cipher.h \
+ /usr/include/emile-1/emile_compress.h /usr/include/emile-1/emile_image.h \
+ /usr/include/evas-1/Evas_Common.h /usr/include/evas-1/Evas_Legacy.h \
+ /usr/include/evas-1/canvas/evas_canvas.eo.legacy.h \
+ /usr/include/evas-1/canvas/evas_common_interface.eo.legacy.h \
+ /usr/include/evas-1/canvas/evas_object.eo.legacy.h \
+ /usr/include/evas-1/canvas/evas_rectangle.eo.legacy.h \
+ /usr/include/evas-1/canvas/evas_image.eo.legacy.h \
+ /usr/include/evas-1/canvas/evas_text.eo.legacy.h \
+ /usr/include/evas-1/canvas/evas_textblock.eo.legacy.h \
+ /usr/include/evas-1/canvas/evas_textgrid.eo.legacy.h \
+ /usr/include/evas-1/canvas/evas_line.eo.legacy.h \
+ /usr/include/evas-1/canvas/evas_polygon.eo.legacy.h \
+ /usr/include/evas-1/canvas/evas_object_smart.eo.legacy.h \
+ /usr/include/evas-1/canvas/evas_smart_clipped.eo.legacy.h \
+ /usr/include/evas-1/canvas/evas_box.eo.legacy.h \
+ /usr/include/evas-1/canvas/evas_table.eo.legacy.h \
+ /usr/include/evas-1/canvas/evas_grid.eo.legacy.h \
+ /usr/include/evas-1/canvas/evas_out.eo.legacy.h \
+ /usr/include/elementary-1/Elementary.h /usr/include/unistd.h \
+ /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+ /usr/include/x86_64-linux-gnu/bits/environments.h \
+ /usr/include/x86_64-linux-gnu/bits/confname.h /usr/include/getopt.h \
+ /usr/include/x86_64-linux-gnu/bits/unistd.h \
+ /usr/include/x86_64-linux-gnu/sys/param.h \
+ /usr/include/x86_64-linux-gnu/bits/param.h /usr/include/linux/param.h \
+ /usr/include/x86_64-linux-gnu/asm/param.h \
+ /usr/include/asm-generic/param.h /usr/include/fnmatch.h \
+ /usr/include/ctype.h /usr/include/dirent.h \
+ /usr/include/x86_64-linux-gnu/bits/dirent.h /usr/include/pwd.h \
+ /usr/include/locale.h /usr/include/x86_64-linux-gnu/bits/locale.h \
+ /usr/include/libintl.h /usr/include/grp.h /usr/include/glob.h \
+ /usr/include/eet-1/Eet.h /usr/include/evas-1/Evas_GL.h \
+ /usr/include/ecore-evas-1/Ecore_Evas.h \
+ /usr/include/ecore-evas-1/Ecore_Evas_Types.h \
+ /usr/include/ecore-file-1/Ecore_File.h \
+ /usr/include/ecore-input-1/Ecore_Input.h \
+ /usr/include/ecore-imf-1/Ecore_IMF.h \
+ /usr/include/ecore-con-1/Ecore_Con.h /usr/include/libgen.h \
+ /usr/include/netdb.h /usr/include/netinet/in.h \
+ /usr/include/x86_64-linux-gnu/sys/socket.h \
+ /usr/include/x86_64-linux-gnu/sys/uio.h \
+ /usr/include/x86_64-linux-gnu/bits/uio.h \
+ /usr/include/x86_64-linux-gnu/bits/socket.h \
+ /usr/include/x86_64-linux-gnu/bits/socket_type.h \
+ /usr/include/x86_64-linux-gnu/bits/sockaddr.h \
+ /usr/include/x86_64-linux-gnu/asm/socket.h \
+ /usr/include/asm-generic/socket.h \
+ /usr/include/x86_64-linux-gnu/asm/sockios.h \
+ /usr/include/asm-generic/sockios.h \
+ /usr/include/x86_64-linux-gnu/bits/socket2.h \
+ /usr/include/x86_64-linux-gnu/bits/in.h /usr/include/rpc/netdb.h \
+ /usr/include/x86_64-linux-gnu/bits/netdb.h \
+ /usr/include/ecore-con-1/Ecore_Con_Legacy.h \
+ /usr/include/ecore-con-1/ecore_con_base.eo.legacy.h \
+ /usr/include/ecore-con-1/ecore_con_server.eo.legacy.h \
+ /usr/include/ecore-con-1/ecore_con_connector.eo.legacy.h \
+ /usr/include/ecore-con-1/ecore_con_client.eo.legacy.h \
+ /usr/include/ecore-con-1/ecore_con_url.eo.legacy.h \
+ /usr/include/edje-1/Edje.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/include/float.h \
+ /usr/include/edje-1/Edje_Common.h /usr/include/edje-1/Edje_Legacy.h \
+ /usr/include/edje-1/edje_object.eo.legacy.h \
+ /usr/include/edje-1/edje_edit.eo.legacy.h /usr/include/eldbus-1/Eldbus.h \
+ /usr/include/eldbus-1/eldbus_connection.h \
+ /usr/include/eldbus-1/eldbus_message.h \
+ /usr/include/eldbus-1/eldbus_message_helper.h \
+ /usr/include/eldbus-1/eldbus_message_eina_value.h \
+ /usr/include/eldbus-1/eldbus_signal_handler.h \
+ /usr/include/eldbus-1/eldbus_pending.h \
+ /usr/include/eldbus-1/eldbus_object.h \
+ /usr/include/eldbus-1/eldbus_proxy.h \
+ /usr/include/eldbus-1/eldbus_freedesktop.h \
+ /usr/include/eldbus-1/eldbus_service.h /usr/include/efreet-1/Efreet.h \
+ /usr/include/efreet-1/efreet_base.h /usr/include/efreet-1/efreet_ini.h \
+ /usr/include/efreet-1/efreet_icon.h \
+ /usr/include/efreet-1/efreet_desktop.h \
+ /usr/include/efreet-1/efreet_menu.h /usr/include/efreet-1/efreet_utils.h \
+ /usr/include/efreet-1/efreet_uri.h /usr/include/efreet-1/Efreet_Mime.h \
+ /usr/include/efreet-1/Efreet_Trash.h \
+ /usr/include/ethumb-client-1/Ethumb_Client.h \
+ /usr/include/ethumb-1/Ethumb.h /usr/include/elementary-1/elm_intro.h \
+ /usr/include/elementary-1/elm_getting_started.h \
+ /usr/include/elementary-1/elm_authors.h \
+ /usr/include/elementary-1/elm_general.h \
+ /usr/include/elementary-1/elm_tooltip.h \
+ /usr/include/elementary-1/elm_object_item.h \
+ /usr/include/elementary-1/elm_widget_item.eo.h \
+ /usr/include/elementary-1/elm_widget_item.eo.legacy.h \
+ /usr/include/elementary-1/elm_prefs_data.h \
+ /usr/include/elementary-1/elm_prefs.h \
+ /usr/include/elementary-1/elm_prefs_common.h \
+ /usr/include/elementary-1/elm_prefs_legacy.h \
+ /usr/include/elementary-1/elm_prefs.eo.legacy.h \
+ /usr/include/elementary-1/elm_systray.h \
+ /usr/include/elementary-1/elm_systray_common.h \
+ /usr/include/elementary-1/elm_sys_notify.h \
+ /usr/include/elementary-1/elm_access.h \
+ /usr/include/elementary-1/elm_access.eo.h \
+ /usr/include/elementary-1/elm_icon.h \
+ /usr/include/elementary-1/elm_icon_common.h \
+ /usr/include/elementary-1/elm_icon_legacy.h \
+ /usr/include/elementary-1/elm_icon.eo.legacy.h \
+ /usr/include/elementary-1/elm_scroller.h \
+ /usr/include/elementary-1/elm_scroller_common.h \
+ /usr/include/elementary-1/elm_scroller_legacy.h \
+ /usr/include/elementary-1/elm_scroller.eo.legacy.h \
+ /usr/include/elementary-1/elm_entry.h \
+ /usr/include/elementary-1/elm_entry_common.h \
+ /usr/include/elementary-1/elm_entry_legacy.h \
+ /usr/include/elementary-1/elm_entry.eo.legacy.h \
+ /usr/include/elementary-1/elm_list.h \
+ /usr/include/elementary-1/elm_list_common.h \
+ /usr/include/elementary-1/elm_list_legacy.h \
+ /usr/include/elementary-1/elm_list_item.eo.legacy.h \
+ /usr/include/elementary-1/elm_list.eo.legacy.h \
+ /usr/include/elementary-1/elm_interfaces.h \
+ /usr/include/elementary-1/elm_interface_atspi_accessible.h \
+ /usr/include/elementary-1/elm_interface_atspi_text.h \
+ /usr/include/elementary-1/elm_interface_atspi_widget_action.h \
+ /usr/include/elementary-1/elc_ctxpopup.h \
+ /usr/include/elementary-1/elc_ctxpopup_common.h \
+ /usr/include/elementary-1/elc_ctxpopup_legacy.h \
+ /usr/include/elementary-1/elm_ctxpopup_item.eo.legacy.h \
+ /usr/include/elementary-1/elm_ctxpopup.eo.legacy.h \
+ /usr/include/elementary-1/elm_dayselector.h \
+ /usr/include/elementary-1/elm_dayselector_common.h \
+ /usr/include/elementary-1/elm_dayselector_legacy.h \
+ /usr/include/elementary-1/elm_dayselector.eo.legacy.h \
+ /usr/include/elementary-1/elc_fileselector_button.h \
+ /usr/include/elementary-1/elc_fileselector_button_legacy.h \
+ /usr/include/elementary-1/elm_fileselector_button.eo.legacy.h \
+ /usr/include/elementary-1/elc_fileselector_entry.h \
+ /usr/include/elementary-1/elc_fileselector_entry_legacy.h \
+ /usr/include/elementary-1/elm_fileselector_entry.eo.legacy.h \
+ /usr/include/elementary-1/elc_fileselector.h \
+ /usr/include/elementary-1/elc_fileselector_common.h \
+ /usr/include/elementary-1/elc_fileselector_legacy.h \
+ /usr/include/elementary-1/elm_fileselector.eo.legacy.h \
+ /usr/include/elementary-1/elc_hoversel.h \
+ /usr/include/elementary-1/elc_hoversel_legacy.h \
+ /usr/include/elementary-1/elm_hoversel_item.eo.legacy.h \
+ /usr/include/elementary-1/elm_hoversel.eo.legacy.h \
+ /usr/include/elementary-1/elc_multibuttonentry.h \
+ /usr/include/elementary-1/elc_multibuttonentry_common.h \
+ /usr/include/elementary-1/elc_multibuttonentry_legacy.h \
+ /usr/include/elementary-1/elm_multibuttonentry_item.eo.legacy.h \
+ /usr/include/elementary-1/elm_multibuttonentry.eo.legacy.h \
+ /usr/include/elementary-1/elc_naviframe.h \
+ /usr/include/elementary-1/elc_naviframe_common.h \
+ /usr/include/elementary-1/elc_naviframe_legacy.h \
+ /usr/include/elementary-1/elm_naviframe_item.eo.legacy.h \
+ /usr/include/elementary-1/elm_naviframe.eo.legacy.h \
+ /usr/include/elementary-1/elc_popup.h \
+ /usr/include/elementary-1/elc_popup_common.h \
+ /usr/include/elementary-1/elc_popup_legacy.h \
+ /usr/include/elementary-1/elm_popup.eo.legacy.h \
+ /usr/include/elementary-1/elm_actionslider.h \
+ /usr/include/elementary-1/elm_actionslider_common.h \
+ /usr/include/elementary-1/elm_actionslider_legacy.h \
+ /usr/include/elementary-1/elm_actionslider.eo.legacy.h \
+ /usr/include/elementary-1/elm_app_common.h \
+ /usr/include/elementary-1/elm_app_server.h \
+ /usr/include/elementary-1/elm_app_server_view.h \
+ /usr/include/elementary-1/elm_app_client.h \
+ /usr/include/elementary-1/elm_app_client_view.h \
+ /usr/include/elementary-1/elm_app.h \
+ /usr/include/elementary-1/elm_atspi_app_object.h \
+ /usr/include/elementary-1/elm_atspi_app_object.eo.legacy.h \
+ /usr/include/elementary-1/elm_bg.h \
+ /usr/include/elementary-1/elm_bg_common.h \
+ /usr/include/elementary-1/elm_bg_legacy.h \
+ /usr/include/elementary-1/elm_bg.eo.legacy.h \
+ /usr/include/elementary-1/elm_box.h \
+ /usr/include/elementary-1/elm_box_common.h \
+ /usr/include/elementary-1/elm_box_legacy.h \
+ /usr/include/elementary-1/elm_box.eo.legacy.h \
+ /usr/include/elementary-1/elm_bubble.h \
+ /usr/include/elementary-1/elm_bubble_common.h \
+ /usr/include/elementary-1/elm_bubble_legacy.h \
+ /usr/include/elementary-1/elm_bubble.eo.legacy.h \
+ /usr/include/elementary-1/elm_button.h \
+ /usr/include/elementary-1/elm_button_legacy.h \
+ /usr/include/elementary-1/elm_button.eo.legacy.h \
+ /usr/include/elementary-1/elm_cache.h \
+ /usr/include/elementary-1/elm_calendar.h \
+ /usr/include/elementary-1/elm_calendar_common.h \
+ /usr/include/elementary-1/elm_calendar_legacy.h \
+ /usr/include/elementary-1/elm_calendar.eo.legacy.h \
+ /usr/include/elementary-1/elm_check.h \
+ /usr/include/elementary-1/elm_check_legacy.h \
+ /usr/include/elementary-1/elm_check.eo.legacy.h \
+ /usr/include/elementary-1/elm_clock.h \
+ /usr/include/elementary-1/elm_clock_common.h \
+ /usr/include/elementary-1/elm_clock_legacy.h \
+ /usr/include/elementary-1/elm_clock.eo.legacy.h \
+ /usr/include/elementary-1/elm_cnp.h \
+ /usr/include/elementary-1/elm_colorselector.h \
+ /usr/include/elementary-1/elm_colorselector_common.h \
+ /usr/include/elementary-1/elm_colorselector_legacy.h \
+ /usr/include/elementary-1/elm_colorselector.eo.legacy.h \
+ /usr/include/elementary-1/elm_color_class.h \
+ /usr/include/elementary-1/elm_config.h \
+ /usr/include/elementary-1/elm_conform.h \
+ /usr/include/elementary-1/elm_conform_legacy.h \
+ /usr/include/elementary-1/elm_container.h \
+ /usr/include/elementary-1/elm_container.eo.legacy.h \
+ /usr/include/elementary-1/elm_cursor.h \
+ /usr/include/elementary-1/elm_datetime.h \
+ /usr/include/elementary-1/elm_datetime_common.h \
+ /usr/include/elementary-1/elm_datetime_legacy.h \
+ /usr/include/elementary-1/elm_datetime.eo.legacy.h \
+ /usr/include/elementary-1/elm_debug.h \
+ /usr/include/elementary-1/elm_diskselector.h \
+ /usr/include/elementary-1/elm_diskselector_common.h \
+ /usr/include/elementary-1/elm_diskselector_legacy.h \
+ /usr/include/elementary-1/elm_diskselector_item.eo.legacy.h \
+ /usr/include/elementary-1/elm_diskselector.eo.legacy.h \
+ /usr/include/elementary-1/elm_finger.h \
+ /usr/include/elementary-1/elm_flip.h \
+ /usr/include/elementary-1/elm_flip_common.h \
+ /usr/include/elementary-1/elm_flip_legacy.h \
+ /usr/include/elementary-1/elm_flip.eo.legacy.h \
+ /usr/include/elementary-1/elm_flipselector.h \
+ /usr/include/elementary-1/elm_flipselector_common.h \
+ /usr/include/elementary-1/elm_flipselector_legacy.h \
+ /usr/include/elementary-1/elm_flipselector_item.eo.legacy.h \
+ /usr/include/elementary-1/elm_flipselector.eo.legacy.h \
+ /usr/include/elementary-1/elm_focus.h \
+ /usr/include/elementary-1/elm_font.h \
+ /usr/include/elementary-1/elm_frame.h \
+ /usr/include/elementary-1/elm_frame_legacy.h \
+ /usr/include/elementary-1/elm_frame.eo.legacy.h \
+ /usr/include/elementary-1/elm_gen.h \
+ /usr/include/elementary-1/elm_gengrid.h \
+ /usr/include/elementary-1/elm_gengrid_common.h \
+ /usr/include/elementary-1/elm_gengrid_legacy.h \
+ /usr/include/elementary-1/elm_gengrid_item.eo.legacy.h \
+ /usr/include/elementary-1/elm_gengrid.eo.legacy.h \
+ /usr/include/elementary-1/elm_genlist.h \
+ /usr/include/elementary-1/elm_genlist_common.h \
+ /usr/include/elementary-1/elm_genlist_legacy.h \
+ /usr/include/elementary-1/elm_genlist_item.eo.legacy.h \
+ /usr/include/elementary-1/elm_genlist.eo.legacy.h \
+ /usr/include/elementary-1/elm_gesture_layer.h \
+ /usr/include/elementary-1/elm_gesture_layer_common.h \
+ /usr/include/elementary-1/elm_gesture_layer_legacy.h \
+ /usr/include/elementary-1/elm_gesture_layer.eo.legacy.h \
+ /usr/include/elementary-1/elm_glview.h \
+ /usr/include/elementary-1/elm_glview_common.h \
+ /usr/include/elementary-1/elm_glview_legacy.h \
+ /usr/include/elementary-1/elm_glview.eo.legacy.h \
+ /usr/include/elementary-1/elm_grid.h \
+ /usr/include/elementary-1/elm_grid_legacy.h \
+ /usr/include/elementary-1/elm_grid.eo.legacy.h \
+ /usr/include/elementary-1/elm_hover.h \
+ /usr/include/elementary-1/elm_hover_common.h \
+ /usr/include/elementary-1/elm_hover_legacy.h \
+ /usr/include/elementary-1/elm_hover.eo.legacy.h \
+ /usr/include/elementary-1/elm_image.h \
+ /usr/include/elementary-1/elm_image_common.h \
+ /usr/include/elementary-1/elm_image_legacy.h \
+ /usr/include/elementary-1/elm_image.eo.legacy.h \
+ /usr/include/elementary-1/elm_index.h \
+ /usr/include/elementary-1/elm_index_common.h \
+ /usr/include/elementary-1/elm_index_legacy.h \
+ /usr/include/elementary-1/elm_index_item.eo.legacy.h \
+ /usr/include/elementary-1/elm_index.eo.legacy.h \
+ /usr/include/elementary-1/elm_inwin.h \
+ /usr/include/elementary-1/elm_inwin_legacy.h \
+ /usr/include/elementary-1/elm_inwin.eo.legacy.h \
+ /usr/include/elementary-1/elm_label.h \
+ /usr/include/elementary-1/elm_label_common.h \
+ /usr/include/elementary-1/elm_label_legacy.h \
+ /usr/include/elementary-1/elm_label.eo.legacy.h \
+ /usr/include/elementary-1/elm_layout.h \
+ /usr/include/elementary-1/elm_layout_common.h \
+ /usr/include/elementary-1/elm_layout_legacy.h \
+ /usr/include/elementary-1/elm_layout.eo.legacy.h \
+ /usr/include/elementary-1/elm_macros.h \
+ /usr/include/elementary-1/elm_map.h \
+ /usr/include/elementary-1/elm_map_common.h \
+ /usr/include/elementary-1/elm_map_legacy.h \
+ /usr/include/elementary-1/elm_map.eo.legacy.h \
+ /usr/include/elementary-1/elm_mapbuf.h \
+ /usr/include/elementary-1/elm_mapbuf_legacy.h \
+ /usr/include/elementary-1/elm_mapbuf.eo.legacy.h \
+ /usr/include/elementary-1/elm_menu.h \
+ /usr/include/elementary-1/elm_menu_common.h \
+ /usr/include/elementary-1/elm_menu_legacy.h \
+ /usr/include/elementary-1/elm_menu_item.eo.legacy.h \
+ /usr/include/elementary-1/elm_menu.eo.legacy.h \
+ /usr/include/elementary-1/elm_mirroring.h \
+ /usr/include/elementary-1/elm_need.h \
+ /usr/include/elementary-1/elm_notify.h \
+ /usr/include/elementary-1/elm_notify_common.h \
+ /usr/include/elementary-1/elm_notify_legacy.h \
+ /usr/include/elementary-1/elm_notify.eo.legacy.h \
+ /usr/include/elementary-1/elm_object.h \
+ /usr/include/elementary-1/elm_panel.h \
+ /usr/include/elementary-1/elm_panel_common.h \
+ /usr/include/elementary-1/elm_panel_legacy.h \
+ /usr/include/elementary-1/elm_panel.eo.legacy.h \
+ /usr/include/elementary-1/elm_panes.h \
+ /usr/include/elementary-1/elm_panes_legacy.h \
+ /usr/include/elementary-1/elm_panes.eo.legacy.h \
+ /usr/include/elementary-1/elm_photocam.h \
+ /usr/include/elementary-1/elm_photocam_legacy.h \
+ /usr/include/elementary-1/elm_photocam.eo.legacy.h \
+ /usr/include/elementary-1/elm_photo.h \
+ /usr/include/elementary-1/elm_photo_legacy.h \
+ /usr/include/elementary-1/elm_photo.eo.legacy.h \
+ /usr/include/elementary-1/elm_plug.h \
+ /usr/include/elementary-1/elm_plug_legacy.h \
+ /usr/include/elementary-1/elm_plug.eo.legacy.h \
+ /usr/include/elementary-1/elm_progressbar.h \
+ /usr/include/elementary-1/elm_progressbar_common.h \
+ /usr/include/elementary-1/elm_progressbar_legacy.h \
+ /usr/include/elementary-1/elm_progressbar.eo.legacy.h \
+ /usr/include/elementary-1/elm_radio.h \
+ /usr/include/elementary-1/elm_radio_legacy.h \
+ /usr/include/elementary-1/elm_radio.eo.legacy.h \
+ /usr/include/elementary-1/elm_route.h \
+ /usr/include/elementary-1/elm_route_legacy.h \
+ /usr/include/elementary-1/elm_route.eo.legacy.h \
+ /usr/include/elementary-1/elm_scale.h \
+ /usr/include/elementary-1/elm_scroll.h \
+ /usr/include/elementary-1/elm_segment_control.h \
+ /usr/include/elementary-1/elm_segment_control_common.h \
+ /usr/include/elementary-1/elm_segment_control_legacy.h \
+ /usr/include/elementary-1/elm_segment_control_item.eo.legacy.h \
+ /usr/include/elementary-1/elm_segment_control.eo.legacy.h \
+ /usr/include/elementary-1/elm_separator.h \
+ /usr/include/elementary-1/elm_separator_legacy.h \
+ /usr/include/elementary-1/elm_separator.eo.legacy.h \
+ /usr/include/elementary-1/elm_slider.h \
+ /usr/include/elementary-1/elm_slider_common.h \
+ /usr/include/elementary-1/elm_slider_legacy.h \
+ /usr/include/elementary-1/elm_slider.eo.legacy.h \
+ /usr/include/elementary-1/elm_slideshow.h \
+ /usr/include/elementary-1/elm_slideshow_common.h \
+ /usr/include/elementary-1/elm_slideshow_legacy.h \
+ /usr/include/elementary-1/elm_slideshow_item.eo.legacy.h \
+ /usr/include/elementary-1/elm_slideshow.eo.legacy.h \
+ /usr/include/elementary-1/elm_spinner.h \
+ /usr/include/elementary-1/elm_spinner_legacy.h \
+ /usr/include/elementary-1/elm_spinner.eo.legacy.h \
+ /usr/include/elementary-1/elm_store.h \
+ /usr/include/elementary-1/elm_table.h \
+ /usr/include/elementary-1/elm_table_legacy.h \
+ /usr/include/elementary-1/elm_table.eo.legacy.h \
+ /usr/include/elementary-1/elm_theme.h \
+ /usr/include/elementary-1/elm_thumb.h \
+ /usr/include/elementary-1/elm_thumb_common.h \
+ /usr/include/elementary-1/elm_thumb_legacy.h \
+ /usr/include/elementary-1/elm_thumb.eo.legacy.h \
+ /usr/include/elementary-1/elm_toolbar.h \
+ /usr/include/elementary-1/elm_toolbar_common.h \
+ /usr/include/elementary-1/elm_toolbar_legacy.h \
+ /usr/include/elementary-1/elm_toolbar_item.eo.legacy.h \
+ /usr/include/elementary-1/elm_toolbar.eo.legacy.h \
+ /usr/include/elementary-1/elm_transit.h \
+ /usr/include/elementary-1/elm_video.h \
+ /usr/include/elementary-1/elm_video_legacy.h \
+ /usr/include/elementary-1/elm_video.eo.legacy.h \
+ /usr/include/elementary-1/elm_web.h \
+ /usr/include/elementary-1/elm_web_common.h \
+ /usr/include/elementary-1/elm_web_legacy.h \
+ /usr/include/elementary-1/elm_web.eo.legacy.h \
+ /usr/include/elementary-1/elm_win.h \
+ /usr/include/elementary-1/elm_win_common.h \
+ /usr/include/elementary-1/elm_win_legacy.h \
+ /usr/include/elementary-1/elm_win.eo.legacy.h \
+ /usr/include/elementary-1/elm_deprecated.h \
+ /usr/include/elementary-1/elm_helper.h src/lib/translation.h config.h \
+ src/lib/epulse.h src/lib/common.h /usr/include/pulse/pulseaudio.h \
+ /usr/include/pulse/mainloop-api.h /usr/include/pulse/cdecl.h \
+ /usr/include/pulse/version.h /usr/include/pulse/sample.h \
+ /usr/include/pulse/gccmacro.h /usr/include/pulse/format.h \
+ /usr/include/pulse/proplist.h /usr/include/pulse/channelmap.h \
+ /usr/include/pulse/def.h /usr/include/pulse/context.h \
+ /usr/include/pulse/operation.h /usr/include/pulse/stream.h \
+ /usr/include/pulse/volume.h /usr/include/pulse/introspect.h \
+ /usr/include/pulse/subscribe.h /usr/include/pulse/scache.h \
+ /usr/include/pulse/error.h /usr/include/pulse/xmalloc.h \
+ /usr/include/assert.h /usr/include/pulse/utf8.h \
+ /usr/include/pulse/thread-mainloop.h /usr/include/pulse/mainloop.h \
+ /usr/include/pulse/mainloop-signal.h /usr/include/pulse/util.h \
+ /usr/include/pulse/timeval.h /usr/include/pulse/rtclock.h
+
+/usr/include/stdc-predef.h:
+
+src/bin/sinks_view.h:
+
+src/lib/common.h:
+
+/usr/include/ecore-1/Ecore.h:
+
+/usr/include/efl-1/Efl_Config.h:
+
+/usr/include/eina-1/Eina.h:
+
+/usr/include/eina-1/eina_config.h:
+
+/usr/include/eina-1/eina/eina_types.h:
+
+/usr/include/eina-1/eina/eina_alloca.h:
+
+/usr/include/alloca.h:
+
+/usr/include/features.h:
+
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:
+
+/usr/include/x86_64-linux-gnu/bits/wordsize.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.8/include/stddef.h:
+
+/usr/include/eina-1/eina/eina_main.h:
+
+/usr/include/eina-1/eina/eina_types.h:
+
+/usr/include/eina-1/eina/eina_fp.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdint.h:
+
+/usr/include/stdint.h:
+
+/usr/include/x86_64-linux-gnu/bits/wchar.h:
+
+/usr/include/eina-1/eina/eina_inline_f32p32.x:
+
+/usr/include/stdlib.h:
+
+/usr/include/x86_64-linux-gnu/bits/waitflags.h:
+
+/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
+
+/usr/include/endian.h:
+
+/usr/include/x86_64-linux-gnu/bits/endian.h:
+
+/usr/include/x86_64-linux-gnu/bits/byteswap.h:
+
+/usr/include/x86_64-linux-gnu/bits/types.h:
+
+/usr/include/x86_64-linux-gnu/bits/typesizes.h:
+
+/usr/include/x86_64-linux-gnu/bits/byteswap-16.h:
+
+/usr/include/xlocale.h:
+
+/usr/include/x86_64-linux-gnu/sys/types.h:
+
+/usr/include/time.h:
+
+/usr/include/x86_64-linux-gnu/sys/select.h:
+
+/usr/include/x86_64-linux-gnu/bits/select.h:
+
+/usr/include/x86_64-linux-gnu/bits/sigset.h:
+
+/usr/include/x86_64-linux-gnu/bits/time.h:
+
+/usr/include/x86_64-linux-gnu/bits/select2.h:
+
+/usr/include/x86_64-linux-gnu/sys/sysmacros.h:
+
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib.h:
+
+/usr/include/eina-1/eina/eina_inline_f16p16.x:
+
+/usr/include/eina-1/eina/eina_inline_f8p24.x:
+
+/usr/include/eina-1/eina/eina_inline_fp.x:
+
+/usr/include/eina-1/eina/eina_rectangle.h:
+
+/usr/include/eina-1/eina/eina_inline_rectangle.x:
+
+/usr/include/eina-1/eina/eina_clist.h:
+
+/usr/include/eina-1/eina/eina_inline_clist.x:
+
+/usr/include/eina-1/eina/eina_inlist.h:
+
+/usr/include/eina-1/eina/eina_iterator.h:
+
+/usr/include/eina-1/eina/eina_magic.h:
+
+/usr/include/eina-1/eina/eina_error.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.8/include/stdarg.h:
+
+/usr/include/eina-1/eina/eina_accessor.h:
+
+/usr/include/eina-1/eina/eina_inline_inlist.x:
+
+/usr/include/eina-1/eina/eina_file.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed/limits.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed/syslimits.h:
+
+/usr/include/limits.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
+
+/usr/include/x86_64-linux-gnu/bits/local_lim.h:
+
+/usr/include/linux/limits.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
+
+/usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
+
+/usr/include/x86_64-linux-gnu/bits/timex.h:
+
+/usr/include/x86_64-linux-gnu/sys/stat.h:
+
+/usr/include/x86_64-linux-gnu/bits/stat.h:
+
+/usr/include/eina-1/eina/eina_array.h:
+
+/usr/include/eina-1/eina/eina_inline_array.x:
+
+/usr/include/stdio.h:
+
+/usr/include/libio.h:
+
+/usr/include/_G_config.h:
+
+/usr/include/wchar.h:
+
+/usr/include/x86_64-linux-gnu/bits/sys_errlist.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:
+
+/usr/include/eina-1/eina/eina_tmpstr.h:
+
+/usr/include/eina-1/eina/eina_list.h:
+
+/usr/include/eina-1/eina/eina_inline_list.x:
+
+/usr/include/eina-1/eina/eina_hash.h:
+
+/usr/include/eina-1/eina/eina_inline_hash.x:
+
+/usr/include/eina-1/eina/eina_trash.h:
+
+/usr/include/eina-1/eina/eina_inline_trash.x:
+
+/usr/include/eina-1/eina/eina_lalloc.h:
+
+/usr/include/eina-1/eina/eina_module.h:
+
+/usr/include/eina-1/eina/eina_mempool.h:
+
+/usr/include/eina-1/eina/eina_module.h:
+
+/usr/include/eina-1/eina/eina_inline_mempool.x:
+
+/usr/include/string.h:
+
+/usr/include/x86_64-linux-gnu/bits/string.h:
+
+/usr/include/x86_64-linux-gnu/bits/string2.h:
+
+/usr/include/x86_64-linux-gnu/bits/string3.h:
+
+/usr/include/eina-1/eina/eina_error.h:
+
+/usr/include/eina-1/eina/eina_log.h:
+
+/usr/include/eina-1/eina/eina_inline_log.x:
+
+/usr/include/eina-1/eina/eina_inarray.h:
+
+/usr/include/eina-1/eina/eina_array.h:
+
+/usr/include/eina-1/eina/eina_binshare.h:
+
+/usr/include/eina-1/eina/eina_stringshare.h:
+
+/usr/include/eina-1/eina/eina_inline_stringshare.x:
+
+/usr/include/eina-1/eina/eina_stringshare.h:
+
+/usr/include/eina-1/eina/eina_ustringshare.h:
+
+/usr/include/eina-1/eina/eina_unicode.h:
+
+/usr/include/x86_64-linux-gnu/bits/wchar2.h:
+
+/usr/include/eina-1/eina/eina_inline_unicode.x:
+
+/usr/include/eina-1/eina/eina_inline_ustringshare.x:
+
+/usr/include/eina-1/eina/eina_ustringshare.h:
+
+/usr/include/eina-1/eina/eina_magic.h:
+
+/usr/include/eina-1/eina/eina_counter.h:
+
+/usr/include/eina-1/eina/eina_rbtree.h:
+
+/usr/include/eina-1/eina/eina_inline_rbtree.x:
+
+/usr/include/eina-1/eina/eina_accessor.h:
+
+/usr/include/eina-1/eina/eina_iterator.h:
+
+/usr/include/eina-1/eina/eina_benchmark.h:
+
+/usr/include/eina-1/eina/eina_convert.h:
+
+/usr/include/eina-1/eina/eina_fp.h:
+
+/usr/include/eina-1/eina/eina_cpu.h:
+
+/usr/include/eina-1/eina/eina_inline_cpu.x:
+
+/usr/include/byteswap.h:
+
+/usr/include/eina-1/eina/eina_sched.h:
+
+/usr/include/eina-1/eina/eina_tiler.h:
+
+/usr/include/eina-1/eina/eina_rectangle.h:
+
+/usr/include/eina-1/eina/eina_inline_tiler.x:
+
+/usr/include/eina-1/eina/eina_safety_checks.h:
+
+/usr/include/eina-1/eina/eina_log.h:
+
+/usr/include/eina-1/eina/eina_thread.h:
+
+/usr/include/eina-1/eina/eina_hamster.h:
+
+/usr/include/eina-1/eina/eina_matrixsparse.h:
+
+/usr/include/eina-1/eina/eina_str.h:
+
+/usr/include/eina-1/eina/eina_inline_str.x:
+
+/usr/include/eina-1/eina/eina_strbuf.h:
+
+/usr/include/eina-1/eina/eina_binbuf.h:
+
+/usr/include/eina-1/eina/eina_ustrbuf.h:
+
+/usr/include/eina-1/eina/eina_unicode.h:
+
+/usr/include/eina-1/eina/eina_quadtree.h:
+
+/usr/include/eina-1/eina/eina_inlist.h:
+
+/usr/include/eina-1/eina/eina_simple_xml_parser.h:
+
+/usr/include/eina-1/eina/eina_lock.h:
+
+/usr/include/eina-1/eina/eina_main.h:
+
+/usr/include/eina-1/eina/eina_inline_lock_posix.x:
+
+/usr/include/sched.h:
+
+/usr/include/x86_64-linux-gnu/bits/sched.h:
+
+/usr/include/errno.h:
+
+/usr/include/x86_64-linux-gnu/bits/errno.h:
+
+/usr/include/linux/errno.h:
+
+/usr/include/x86_64-linux-gnu/asm/errno.h:
+
+/usr/include/asm-generic/errno.h:
+
+/usr/include/asm-generic/errno-base.h:
+
+/usr/include/pthread.h:
+
+/usr/include/x86_64-linux-gnu/bits/setjmp.h:
+
+/usr/include/semaphore.h:
+
+/usr/include/x86_64-linux-gnu/bits/semaphore.h:
+
+/usr/include/x86_64-linux-gnu/sys/time.h:
+
+/usr/include/eina-1/eina/eina_prefix.h:
+
+/usr/include/eina-1/eina/eina_refcount.h:
+
+/usr/include/eina-1/eina/eina_mmap.h:
+
+/usr/include/eina-1/eina/eina_xattr.h:
+
+/usr/include/eina-1/eina/eina_value.h:
+
+/usr/include/eina-1/eina/eina_inarray.h:
+
+/usr/include/eina-1/eina/eina_list.h:
+
+/usr/include/eina-1/eina/eina_hash.h:
+
+/usr/include/eina-1/eina/eina_inline_value.x:
+
+/usr/include/eina-1/eina/eina_value_util.h:
+
+/usr/include/eina-1/eina/eina_value.h:
+
+/usr/include/eina-1/eina/eina_inline_value_util.x:
+
+/usr/include/inttypes.h:
+
+/usr/include/math.h:
+
+/usr/include/x86_64-linux-gnu/bits/huge_val.h:
+
+/usr/include/x86_64-linux-gnu/bits/huge_valf.h:
+
+/usr/include/x86_64-linux-gnu/bits/huge_vall.h:
+
+/usr/include/x86_64-linux-gnu/bits/inf.h:
+
+/usr/include/x86_64-linux-gnu/bits/nan.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathdef.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathinline.h:
+
+/usr/include/eina-1/eina/eina_cow.h:
+
+/usr/include/eina-1/eina/eina_thread_queue.h:
+
+/usr/include/eina-1/eina/eina_matrix.h:
+
+/usr/include/eina-1/eina/eina_quad.h:
+
+/usr/include/eo-1/Eo.h:
+
+/usr/include/signal.h:
+
+/usr/include/x86_64-linux-gnu/bits/signum.h:
+
+/usr/include/x86_64-linux-gnu/bits/siginfo.h:
+
+/usr/include/x86_64-linux-gnu/bits/sigaction.h:
+
+/usr/include/x86_64-linux-gnu/bits/sigcontext.h:
+
+/usr/include/x86_64-linux-gnu/bits/sigstack.h:
+
+/usr/include/x86_64-linux-gnu/sys/ucontext.h:
+
+/usr/include/x86_64-linux-gnu/bits/sigthread.h:
+
+/usr/include/ecore-1/Ecore_Common.h:
+
+/usr/include/ecore-1/Ecore_Legacy.h:
+
+/usr/include/ecore-1/ecore_poller.eo.legacy.h:
+
+/usr/include/ecore-1/ecore_animator.eo.legacy.h:
+
+/usr/include/ecore-1/ecore_timer.eo.legacy.h:
+
+/usr/include/ecore-1/ecore_idler.eo.legacy.h:
+
+/usr/include/ecore-1/ecore_exe.eo.legacy.h:
+
+/usr/include/ecore-1/ecore_job.eo.legacy.h:
+
+/usr/include/evas-1/Evas.h:
+
+/usr/include/efl-1/Efl.h:
+
+/usr/include/evas-1/Evas_Loader.h:
+
+/usr/include/emile-1/Emile.h:
+
+/usr/include/emile-1/emile_cipher.h:
+
+/usr/include/emile-1/emile_compress.h:
+
+/usr/include/emile-1/emile_image.h:
+
+/usr/include/evas-1/Evas_Common.h:
+
+/usr/include/evas-1/Evas_Legacy.h:
+
+/usr/include/evas-1/canvas/evas_canvas.eo.legacy.h:
+
+/usr/include/evas-1/canvas/evas_common_interface.eo.legacy.h:
+
+/usr/include/evas-1/canvas/evas_object.eo.legacy.h:
+
+/usr/include/evas-1/canvas/evas_rectangle.eo.legacy.h:
+
+/usr/include/evas-1/canvas/evas_image.eo.legacy.h:
+
+/usr/include/evas-1/canvas/evas_text.eo.legacy.h:
+
+/usr/include/evas-1/canvas/evas_textblock.eo.legacy.h:
+
+/usr/include/evas-1/canvas/evas_textgrid.eo.legacy.h:
+
+/usr/include/evas-1/canvas/evas_line.eo.legacy.h:
+
+/usr/include/evas-1/canvas/evas_polygon.eo.legacy.h:
+
+/usr/include/evas-1/canvas/evas_object_smart.eo.legacy.h:
+
+/usr/include/evas-1/canvas/evas_smart_clipped.eo.legacy.h:
+
+/usr/include/evas-1/canvas/evas_box.eo.legacy.h:
+
+/usr/include/evas-1/canvas/evas_table.eo.legacy.h:
+
+/usr/include/evas-1/canvas/evas_grid.eo.legacy.h:
+
+/usr/include/evas-1/canvas/evas_out.eo.legacy.h:
+
+/usr/include/elementary-1/Elementary.h:
+
+/usr/include/unistd.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix_opt.h:
+
+/usr/include/x86_64-linux-gnu/bits/environments.h:
+
+/usr/include/x86_64-linux-gnu/bits/confname.h:
+
+/usr/include/getopt.h:
+
+/usr/include/x86_64-linux-gnu/bits/unistd.h:
+
+/usr/include/x86_64-linux-gnu/sys/param.h:
+
+/usr/include/x86_64-linux-gnu/bits/param.h:
+
+/usr/include/linux/param.h:
+
+/usr/include/x86_64-linux-gnu/asm/param.h:
+
+/usr/include/asm-generic/param.h:
+
+/usr/include/fnmatch.h:
+
+/usr/include/ctype.h:
+
+/usr/include/dirent.h:
+
+/usr/include/x86_64-linux-gnu/bits/dirent.h:
+
+/usr/include/pwd.h:
+
+/usr/include/locale.h:
+
+/usr/include/x86_64-linux-gnu/bits/locale.h:
+
+/usr/include/libintl.h:
+
+/usr/include/grp.h:
+
+/usr/include/glob.h:
+
+/usr/include/eet-1/Eet.h:
+
+/usr/include/evas-1/Evas_GL.h:
+
+/usr/include/ecore-evas-1/Ecore_Evas.h:
+
+/usr/include/ecore-evas-1/Ecore_Evas_Types.h:
+
+/usr/include/ecore-file-1/Ecore_File.h:
+
+/usr/include/ecore-input-1/Ecore_Input.h:
+
+/usr/include/ecore-imf-1/Ecore_IMF.h:
+
+/usr/include/ecore-con-1/Ecore_Con.h:
+
+/usr/include/libgen.h:
+
+/usr/include/netdb.h:
+
+/usr/include/netinet/in.h:
+
+/usr/include/x86_64-linux-gnu/sys/socket.h:
+
+/usr/include/x86_64-linux-gnu/sys/uio.h:
+
+/usr/include/x86_64-linux-gnu/bits/uio.h:
+
+/usr/include/x86_64-linux-gnu/bits/socket.h:
+
+/usr/include/x86_64-linux-gnu/bits/socket_type.h:
+
+/usr/include/x86_64-linux-gnu/bits/sockaddr.h:
+
+/usr/include/x86_64-linux-gnu/asm/socket.h:
+
+/usr/include/asm-generic/socket.h:
+
+/usr/include/x86_64-linux-gnu/asm/sockios.h:
+
+/usr/include/asm-generic/sockios.h:
+
+/usr/include/x86_64-linux-gnu/bits/socket2.h:
+
+/usr/include/x86_64-linux-gnu/bits/in.h:
+
+/usr/include/rpc/netdb.h:
+
+/usr/include/x86_64-linux-gnu/bits/netdb.h:
+
+/usr/include/ecore-con-1/Ecore_Con_Legacy.h:
+
+/usr/include/ecore-con-1/ecore_con_base.eo.legacy.h:
+
+/usr/include/ecore-con-1/ecore_con_server.eo.legacy.h:
+
+/usr/include/ecore-con-1/ecore_con_connector.eo.legacy.h:
+
+/usr/include/ecore-con-1/ecore_con_client.eo.legacy.h:
+
+/usr/include/ecore-con-1/ecore_con_url.eo.legacy.h:
+
+/usr/include/edje-1/Edje.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.8/include/float.h:
+
+/usr/include/edje-1/Edje_Common.h:
+
+/usr/include/edje-1/Edje_Legacy.h:
+
+/usr/include/edje-1/edje_object.eo.legacy.h:
+
+/usr/include/edje-1/edje_edit.eo.legacy.h:
+
+/usr/include/eldbus-1/Eldbus.h:
+
+/usr/include/eldbus-1/eldbus_connection.h:
+
+/usr/include/eldbus-1/eldbus_message.h:
+
+/usr/include/eldbus-1/eldbus_message_helper.h:
+
+/usr/include/eldbus-1/eldbus_message_eina_value.h:
+
+/usr/include/eldbus-1/eldbus_signal_handler.h:
+
+/usr/include/eldbus-1/eldbus_pending.h:
+
+/usr/include/eldbus-1/eldbus_object.h:
+
+/usr/include/eldbus-1/eldbus_proxy.h:
+
+/usr/include/eldbus-1/eldbus_freedesktop.h:
+
+/usr/include/eldbus-1/eldbus_service.h:
+
+/usr/include/efreet-1/Efreet.h:
+
+/usr/include/efreet-1/efreet_base.h:
+
+/usr/include/efreet-1/efreet_ini.h:
+
+/usr/include/efreet-1/efreet_icon.h:
+
+/usr/include/efreet-1/efreet_desktop.h:
+
+/usr/include/efreet-1/efreet_menu.h:
+
+/usr/include/efreet-1/efreet_utils.h:
+
+/usr/include/efreet-1/efreet_uri.h:
+
+/usr/include/efreet-1/Efreet_Mime.h:
+
+/usr/include/efreet-1/Efreet_Trash.h:
+
+/usr/include/ethumb-client-1/Ethumb_Client.h:
+
+/usr/include/ethumb-1/Ethumb.h:
+
+/usr/include/elementary-1/elm_intro.h:
+
+/usr/include/elementary-1/elm_getting_started.h:
+
+/usr/include/elementary-1/elm_authors.h:
+
+/usr/include/elementary-1/elm_general.h:
+
+/usr/include/elementary-1/elm_tooltip.h:
+
+/usr/include/elementary-1/elm_object_item.h:
+
+/usr/include/elementary-1/elm_widget_item.eo.h:
+
+/usr/include/elementary-1/elm_widget_item.eo.legacy.h:
+
+/usr/include/elementary-1/elm_prefs_data.h:
+
+/usr/include/elementary-1/elm_prefs.h:
+
+/usr/include/elementary-1/elm_prefs_common.h:
+
+/usr/include/elementary-1/elm_prefs_legacy.h:
+
+/usr/include/elementary-1/elm_prefs.eo.legacy.h:
+
+/usr/include/elementary-1/elm_systray.h:
+
+/usr/include/elementary-1/elm_systray_common.h:
+
+/usr/include/elementary-1/elm_sys_notify.h:
+
+/usr/include/elementary-1/elm_access.h:
+
+/usr/include/elementary-1/elm_access.eo.h:
+
+/usr/include/elementary-1/elm_icon.h:
+
+/usr/include/elementary-1/elm_icon_common.h:
+
+/usr/include/elementary-1/elm_icon_legacy.h:
+
+/usr/include/elementary-1/elm_icon.eo.legacy.h:
+
+/usr/include/elementary-1/elm_scroller.h:
+
+/usr/include/elementary-1/elm_scroller_common.h:
+
+/usr/include/elementary-1/elm_scroller_legacy.h:
+
+/usr/include/elementary-1/elm_scroller.eo.legacy.h:
+
+/usr/include/elementary-1/elm_entry.h:
+
+/usr/include/elementary-1/elm_entry_common.h:
+
+/usr/include/elementary-1/elm_entry_legacy.h:
+
+/usr/include/elementary-1/elm_entry.eo.legacy.h:
+
+/usr/include/elementary-1/elm_list.h:
+
+/usr/include/elementary-1/elm_list_common.h:
+
+/usr/include/elementary-1/elm_list_legacy.h:
+
+/usr/include/elementary-1/elm_list_item.eo.legacy.h:
+
+/usr/include/elementary-1/elm_list.eo.legacy.h:
+
+/usr/include/elementary-1/elm_interfaces.h:
+
+/usr/include/elementary-1/elm_interface_atspi_accessible.h:
+
+/usr/include/elementary-1/elm_interface_atspi_text.h:
+
+/usr/include/elementary-1/elm_interface_atspi_widget_action.h:
+
+/usr/include/elementary-1/elc_ctxpopup.h:
+
+/usr/include/elementary-1/elc_ctxpopup_common.h:
+
+/usr/include/elementary-1/elc_ctxpopup_legacy.h:
+
+/usr/include/elementary-1/elm_ctxpopup_item.eo.legacy.h:
+
+/usr/include/elementary-1/elm_ctxpopup.eo.legacy.h:
+
+/usr/include/elementary-1/elm_dayselector.h:
+
+/usr/include/elementary-1/elm_dayselector_common.h:
+
+/usr/include/elementary-1/elm_dayselector_legacy.h:
+
+/usr/include/elementary-1/elm_dayselector.eo.legacy.h:
+
+/usr/include/elementary-1/elc_fileselector_button.h:
+
+/usr/include/elementary-1/elc_fileselector_button_legacy.h:
+
+/usr/include/elementary-1/elm_fileselector_button.eo.legacy.h:
+
+/usr/include/elementary-1/elc_fileselector_entry.h:
+
+/usr/include/elementary-1/elc_fileselector_entry_legacy.h:
+
+/usr/include/elementary-1/elm_fileselector_entry.eo.legacy.h:
+
+/usr/include/elementary-1/elc_fileselector.h:
+
+/usr/include/elementary-1/elc_fileselector_common.h:
+
+/usr/include/elementary-1/elc_fileselector_legacy.h:
+
+/usr/include/elementary-1/elm_fileselector.eo.legacy.h:
+
+/usr/include/elementary-1/elc_hoversel.h:
+
+/usr/include/elementary-1/elc_hoversel_legacy.h:
+
+/usr/include/elementary-1/elm_hoversel_item.eo.legacy.h:
+
+/usr/include/elementary-1/elm_hoversel.eo.legacy.h:
+
+/usr/include/elementary-1/elc_multibuttonentry.h:
+
+/usr/include/elementary-1/elc_multibuttonentry_common.h:
+
+/usr/include/elementary-1/elc_multibuttonentry_legacy.h:
+
+/usr/include/elementary-1/elm_multibuttonentry_item.eo.legacy.h:
+
+/usr/include/elementary-1/elm_multibuttonentry.eo.legacy.h:
+
+/usr/include/elementary-1/elc_naviframe.h:
+
+/usr/include/elementary-1/elc_naviframe_common.h:
+
+/usr/include/elementary-1/elc_naviframe_legacy.h:
+
+/usr/include/elementary-1/elm_naviframe_item.eo.legacy.h:
+
+/usr/include/elementary-1/elm_naviframe.eo.legacy.h:
+
+/usr/include/elementary-1/elc_popup.h:
+
+/usr/include/elementary-1/elc_popup_common.h:
+
+/usr/include/elementary-1/elc_popup_legacy.h:
+
+/usr/include/elementary-1/elm_popup.eo.legacy.h:
+
+/usr/include/elementary-1/elm_actionslider.h:
+
+/usr/include/elementary-1/elm_actionslider_common.h:
+
+/usr/include/elementary-1/elm_actionslider_legacy.h:
+
+/usr/include/elementary-1/elm_actionslider.eo.legacy.h:
+
+/usr/include/elementary-1/elm_app_common.h:
+
+/usr/include/elementary-1/elm_app_server.h:
+
+/usr/include/elementary-1/elm_app_server_view.h:
+
+/usr/include/elementary-1/elm_app_client.h:
+
+/usr/include/elementary-1/elm_app_client_view.h:
+
+/usr/include/elementary-1/elm_app.h:
+
+/usr/include/elementary-1/elm_atspi_app_object.h:
+
+/usr/include/elementary-1/elm_atspi_app_object.eo.legacy.h:
+
+/usr/include/elementary-1/elm_bg.h:
+
+/usr/include/elementary-1/elm_bg_common.h:
+
+/usr/include/elementary-1/elm_bg_legacy.h:
+
+/usr/include/elementary-1/elm_bg.eo.legacy.h:
+
+/usr/include/elementary-1/elm_box.h:
+
+/usr/include/elementary-1/elm_box_common.h:
+
+/usr/include/elementary-1/elm_box_legacy.h:
+
+/usr/include/elementary-1/elm_box.eo.legacy.h:
+
+/usr/include/elementary-1/elm_bubble.h:
+
+/usr/include/elementary-1/elm_bubble_common.h:
+
+/usr/include/elementary-1/elm_bubble_legacy.h:
+
+/usr/include/elementary-1/elm_bubble.eo.legacy.h:
+
+/usr/include/elementary-1/elm_button.h:
+
+/usr/include/elementary-1/elm_button_legacy.h:
+
+/usr/include/elementary-1/elm_button.eo.legacy.h:
+
+/usr/include/elementary-1/elm_cache.h:
+
+/usr/include/elementary-1/elm_calendar.h:
+
+/usr/include/elementary-1/elm_calendar_common.h:
+
+/usr/include/elementary-1/elm_calendar_legacy.h:
+
+/usr/include/elementary-1/elm_calendar.eo.legacy.h:
+
+/usr/include/elementary-1/elm_check.h:
+
+/usr/include/elementary-1/elm_check_legacy.h:
+
+/usr/include/elementary-1/elm_check.eo.legacy.h:
+
+/usr/include/elementary-1/elm_clock.h:
+
+/usr/include/elementary-1/elm_clock_common.h:
+
+/usr/include/elementary-1/elm_clock_legacy.h:
+
+/usr/include/elementary-1/elm_clock.eo.legacy.h:
+
+/usr/include/elementary-1/elm_cnp.h:
+
+/usr/include/elementary-1/elm_colorselector.h:
+
+/usr/include/elementary-1/elm_colorselector_common.h:
+
+/usr/include/elementary-1/elm_colorselector_legacy.h:
+
+/usr/include/elementary-1/elm_colorselector.eo.legacy.h:
+
+/usr/include/elementary-1/elm_color_class.h:
+
+/usr/include/elementary-1/elm_config.h:
+
+/usr/include/elementary-1/elm_conform.h:
+
+/usr/include/elementary-1/elm_conform_legacy.h:
+
+/usr/include/elementary-1/elm_container.h:
+
+/usr/include/elementary-1/elm_container.eo.legacy.h:
+
+/usr/include/elementary-1/elm_cursor.h:
+
+/usr/include/elementary-1/elm_datetime.h:
+
+/usr/include/elementary-1/elm_datetime_common.h:
+
+/usr/include/elementary-1/elm_datetime_legacy.h:
+
+/usr/include/elementary-1/elm_datetime.eo.legacy.h:
+
+/usr/include/elementary-1/elm_debug.h:
+
+/usr/include/elementary-1/elm_diskselector.h:
+
+/usr/include/elementary-1/elm_diskselector_common.h:
+
+/usr/include/elementary-1/elm_diskselector_legacy.h:
+
+/usr/include/elementary-1/elm_diskselector_item.eo.legacy.h:
+
+/usr/include/elementary-1/elm_diskselector.eo.legacy.h:
+
+/usr/include/elementary-1/elm_finger.h:
+
+/usr/include/elementary-1/elm_flip.h:
+
+/usr/include/elementary-1/elm_flip_common.h:
+
+/usr/include/elementary-1/elm_flip_legacy.h:
+
+/usr/include/elementary-1/elm_flip.eo.legacy.h:
+
+/usr/include/elementary-1/elm_flipselector.h:
+
+/usr/include/elementary-1/elm_flipselector_common.h:
+
+/usr/include/elementary-1/elm_flipselector_legacy.h:
+
+/usr/include/elementary-1/elm_flipselector_item.eo.legacy.h:
+
+/usr/include/elementary-1/elm_flipselector.eo.legacy.h:
+
+/usr/include/elementary-1/elm_focus.h:
+
+/usr/include/elementary-1/elm_font.h:
+
+/usr/include/elementary-1/elm_frame.h:
+
+/usr/include/elementary-1/elm_frame_legacy.h:
+
+/usr/include/elementary-1/elm_frame.eo.legacy.h:
+
+/usr/include/elementary-1/elm_gen.h:
+
+/usr/include/elementary-1/elm_gengrid.h:
+
+/usr/include/elementary-1/elm_gengrid_common.h:
+
+/usr/include/elementary-1/elm_gengrid_legacy.h:
+
+/usr/include/elementary-1/elm_gengrid_item.eo.legacy.h:
+
+/usr/include/elementary-1/elm_gengrid.eo.legacy.h:
+
+/usr/include/elementary-1/elm_genlist.h:
+
+/usr/include/elementary-1/elm_genlist_common.h:
+
+/usr/include/elementary-1/elm_genlist_legacy.h:
+
+/usr/include/elementary-1/elm_genlist_item.eo.legacy.h:
+
+/usr/include/elementary-1/elm_genlist.eo.legacy.h:
+
+/usr/include/elementary-1/elm_gesture_layer.h:
+
+/usr/include/elementary-1/elm_gesture_layer_common.h:
+
+/usr/include/elementary-1/elm_gesture_layer_legacy.h:
+
+/usr/include/elementary-1/elm_gesture_layer.eo.legacy.h:
+
+/usr/include/elementary-1/elm_glview.h:
+
+/usr/include/elementary-1/elm_glview_common.h:
+
+/usr/include/elementary-1/elm_glview_legacy.h:
+
+/usr/include/elementary-1/elm_glview.eo.legacy.h:
+
+/usr/include/elementary-1/elm_grid.h:
+
+/usr/include/elementary-1/elm_grid_legacy.h:
+
+/usr/include/elementary-1/elm_grid.eo.legacy.h:
+
+/usr/include/elementary-1/elm_hover.h:
+
+/usr/include/elementary-1/elm_hover_common.h:
+
+/usr/include/elementary-1/elm_hover_legacy.h:
+
+/usr/include/elementary-1/elm_hover.eo.legacy.h:
+
+/usr/include/elementary-1/elm_image.h:
+
+/usr/include/elementary-1/elm_image_common.h:
+
+/usr/include/elementary-1/elm_image_legacy.h:
+
+/usr/include/elementary-1/elm_image.eo.legacy.h:
+
+/usr/include/elementary-1/elm_index.h:
+
+/usr/include/elementary-1/elm_index_common.h:
+
+/usr/include/elementary-1/elm_index_legacy.h:
+
+/usr/include/elementary-1/elm_index_item.eo.legacy.h:
+
+/usr/include/elementary-1/elm_index.eo.legacy.h:
+
+/usr/include/elementary-1/elm_inwin.h:
+
+/usr/include/elementary-1/elm_inwin_legacy.h:
+
+/usr/include/elementary-1/elm_inwin.eo.legacy.h:
+
+/usr/include/elementary-1/elm_label.h:
+
+/usr/include/elementary-1/elm_label_common.h:
+
+/usr/include/elementary-1/elm_label_legacy.h:
+
+/usr/include/elementary-1/elm_label.eo.legacy.h:
+
+/usr/include/elementary-1/elm_layout.h:
+
+/usr/include/elementary-1/elm_layout_common.h:
+
+/usr/include/elementary-1/elm_layout_legacy.h:
+
+/usr/include/elementary-1/elm_layout.eo.legacy.h:
+
+/usr/include/elementary-1/elm_macros.h:
+
+/usr/include/elementary-1/elm_map.h:
+
+/usr/include/elementary-1/elm_map_common.h:
+
+/usr/include/elementary-1/elm_map_legacy.h:
+
+/usr/include/elementary-1/elm_map.eo.legacy.h:
+
+/usr/include/elementary-1/elm_mapbuf.h:
+
+/usr/include/elementary-1/elm_mapbuf_legacy.h:
+
+/usr/include/elementary-1/elm_mapbuf.eo.legacy.h:
+
+/usr/include/elementary-1/elm_menu.h:
+
+/usr/include/elementary-1/elm_menu_common.h:
+
+/usr/include/elementary-1/elm_menu_legacy.h:
+
+/usr/include/elementary-1/elm_menu_item.eo.legacy.h:
+
+/usr/include/elementary-1/elm_menu.eo.legacy.h:
+
+/usr/include/elementary-1/elm_mirroring.h:
+
+/usr/include/elementary-1/elm_need.h:
+
+/usr/include/elementary-1/elm_notify.h:
+
+/usr/include/elementary-1/elm_notify_common.h:
+
+/usr/include/elementary-1/elm_notify_legacy.h:
+
+/usr/include/elementary-1/elm_notify.eo.legacy.h:
+
+/usr/include/elementary-1/elm_object.h:
+
+/usr/include/elementary-1/elm_panel.h:
+
+/usr/include/elementary-1/elm_panel_common.h:
+
+/usr/include/elementary-1/elm_panel_legacy.h:
+
+/usr/include/elementary-1/elm_panel.eo.legacy.h:
+
+/usr/include/elementary-1/elm_panes.h:
+
+/usr/include/elementary-1/elm_panes_legacy.h:
+
+/usr/include/elementary-1/elm_panes.eo.legacy.h:
+
+/usr/include/elementary-1/elm_photocam.h:
+
+/usr/include/elementary-1/elm_photocam_legacy.h:
+
+/usr/include/elementary-1/elm_photocam.eo.legacy.h:
+
+/usr/include/elementary-1/elm_photo.h:
+
+/usr/include/elementary-1/elm_photo_legacy.h:
+
+/usr/include/elementary-1/elm_photo.eo.legacy.h:
+
+/usr/include/elementary-1/elm_plug.h:
+
+/usr/include/elementary-1/elm_plug_legacy.h:
+
+/usr/include/elementary-1/elm_plug.eo.legacy.h:
+
+/usr/include/elementary-1/elm_progressbar.h:
+
+/usr/include/elementary-1/elm_progressbar_common.h:
+
+/usr/include/elementary-1/elm_progressbar_legacy.h:
+
+/usr/include/elementary-1/elm_progressbar.eo.legacy.h:
+
+/usr/include/elementary-1/elm_radio.h:
+
+/usr/include/elementary-1/elm_radio_legacy.h:
+
+/usr/include/elementary-1/elm_radio.eo.legacy.h:
+
+/usr/include/elementary-1/elm_route.h:
+
+/usr/include/elementary-1/elm_route_legacy.h:
+
+/usr/include/elementary-1/elm_route.eo.legacy.h:
+
+/usr/include/elementary-1/elm_scale.h:
+
+/usr/include/elementary-1/elm_scroll.h:
+
+/usr/include/elementary-1/elm_segment_control.h:
+
+/usr/include/elementary-1/elm_segment_control_common.h:
+
+/usr/include/elementary-1/elm_segment_control_legacy.h:
+
+/usr/include/elementary-1/elm_segment_control_item.eo.legacy.h:
+
+/usr/include/elementary-1/elm_segment_control.eo.legacy.h:
+
+/usr/include/elementary-1/elm_separator.h:
+
+/usr/include/elementary-1/elm_separator_legacy.h:
+
+/usr/include/elementary-1/elm_separator.eo.legacy.h:
+
+/usr/include/elementary-1/elm_slider.h:
+
+/usr/include/elementary-1/elm_slider_common.h:
+
+/usr/include/elementary-1/elm_slider_legacy.h:
+
+/usr/include/elementary-1/elm_slider.eo.legacy.h:
+
+/usr/include/elementary-1/elm_slideshow.h:
+
+/usr/include/elementary-1/elm_slideshow_common.h:
+
+/usr/include/elementary-1/elm_slideshow_legacy.h:
+
+/usr/include/elementary-1/elm_slideshow_item.eo.legacy.h:
+
+/usr/include/elementary-1/elm_slideshow.eo.legacy.h:
+
+/usr/include/elementary-1/elm_spinner.h:
+
+/usr/include/elementary-1/elm_spinner_legacy.h:
+
+/usr/include/elementary-1/elm_spinner.eo.legacy.h:
+
+/usr/include/elementary-1/elm_store.h:
+
+/usr/include/elementary-1/elm_table.h:
+
+/usr/include/elementary-1/elm_table_legacy.h:
+
+/usr/include/elementary-1/elm_table.eo.legacy.h:
+
+/usr/include/elementary-1/elm_theme.h:
+
+/usr/include/elementary-1/elm_thumb.h:
+
+/usr/include/elementary-1/elm_thumb_common.h:
+
+/usr/include/elementary-1/elm_thumb_legacy.h:
+
+/usr/include/elementary-1/elm_thumb.eo.legacy.h:
+
+/usr/include/elementary-1/elm_toolbar.h:
+
+/usr/include/elementary-1/elm_toolbar_common.h:
+
+/usr/include/elementary-1/elm_toolbar_legacy.h:
+
+/usr/include/elementary-1/elm_toolbar_item.eo.legacy.h:
+
+/usr/include/elementary-1/elm_toolbar.eo.legacy.h:
+
+/usr/include/elementary-1/elm_transit.h:
+
+/usr/include/elementary-1/elm_video.h:
+
+/usr/include/elementary-1/elm_video_legacy.h:
+
+/usr/include/elementary-1/elm_video.eo.legacy.h:
+
+/usr/include/elementary-1/elm_web.h:
+
+/usr/include/elementary-1/elm_web_common.h:
+
+/usr/include/elementary-1/elm_web_legacy.h:
+
+/usr/include/elementary-1/elm_web.eo.legacy.h:
+
+/usr/include/elementary-1/elm_win.h:
+
+/usr/include/elementary-1/elm_win_common.h:
+
+/usr/include/elementary-1/elm_win_legacy.h:
+
+/usr/include/elementary-1/elm_win.eo.legacy.h:
+
+/usr/include/elementary-1/elm_deprecated.h:
+
+/usr/include/elementary-1/elm_helper.h:
+
+src/lib/translation.h:
+
+config.h:
+
+src/lib/epulse.h:
+
+src/lib/common.h:
+
+/usr/include/pulse/pulseaudio.h:
+
+/usr/include/pulse/mainloop-api.h:
+
+/usr/include/pulse/cdecl.h:
+
+/usr/include/pulse/version.h:
+
+/usr/include/pulse/sample.h:
+
+/usr/include/pulse/gccmacro.h:
+
+/usr/include/pulse/format.h:
+
+/usr/include/pulse/proplist.h:
+
+/usr/include/pulse/channelmap.h:
+
+/usr/include/pulse/def.h:
+
+/usr/include/pulse/context.h:
+
+/usr/include/pulse/operation.h:
+
+/usr/include/pulse/stream.h:
+
+/usr/include/pulse/volume.h:
+
+/usr/include/pulse/introspect.h:
+
+/usr/include/pulse/subscribe.h:
+
+/usr/include/pulse/scache.h:
+
+/usr/include/pulse/error.h:
+
+/usr/include/pulse/xmalloc.h:
+
+/usr/include/assert.h:
+
+/usr/include/pulse/utf8.h:
+
+/usr/include/pulse/thread-mainloop.h:
+
+/usr/include/pulse/mainloop.h:
+
+/usr/include/pulse/mainloop-signal.h:
+
+/usr/include/pulse/util.h:
+
+/usr/include/pulse/timeval.h:
+
+/usr/include/pulse/rtclock.h:

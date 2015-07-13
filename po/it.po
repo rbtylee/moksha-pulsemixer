@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: epulse 0.1\n"
 "Report-Msgid-Bugs-To: flavio.ceolin@gmail.com\n"
-"POT-Creation-Date: 2014-08-22 00:10+0200\n"
+"POT-Creation-Date: 2015-07-12 20:38-0500\n"
 "PO-Revision-Date: 2014-08-29 12:29+0200\n"
 "Last-Translator: Massimo Maiurana <maiurana@gmail.com>\n"
 "Language-Team: none\n"
@@ -32,7 +32,7 @@ msgid "Inputs"
 msgstr "Ingressi"
 
 #: src/bin/playbacks_view.c:305 src/bin/sinks_view.c:263
-#: src/module/e_mod_main.c:414
+#: src/module/e_mod_main.c:451
 msgid "Mute"
 msgstr "Attiva muto"
 
@@ -40,38 +40,39 @@ msgstr "Attiva muto"
 msgid "Unmute"
 msgstr "Disattiva muto"
 
-#: src/module/e_mod_main.c:107
+#: src/module/e_mod_main.c:108
 msgid "New volume"
 msgstr "Nuovo volume"
 
-#: src/module/e_mod_main.c:120
+#: src/module/e_mod_main.c:126
 msgid "EPulse"
 msgstr "EPulse"
 
-#: src/module/e_mod_main.c:123
-msgid "Volume changed"
+#: src/module/e_mod_main.c:129
+#, fuzzy
+msgid "Volume Changed"
 msgstr "Il volume è cambiato"
 
-#: src/module/e_mod_main.c:219
+#: src/module/e_mod_main.c:229
 msgid "Increase Volume"
 msgstr "Aumenta volume"
 
-#: src/module/e_mod_main.c:227
+#: src/module/e_mod_main.c:237
 msgid "Decrease Volume"
 msgstr "Diminuisci volume"
 
-#: src/module/e_mod_main.c:235
+#: src/module/e_mod_main.c:245
 msgid "Mute volume"
 msgstr "Attiva muto"
 
-#: src/module/e_mod_main.c:248
+#: src/module/e_mod_main.c:263
 msgid "Volume Increase"
 msgstr "Incremento volume"
 
-#: src/module/e_mod_main.c:255 src/module/e_mod_main.c:262
+#: src/module/e_mod_main.c:270 src/module/e_mod_main.c:277
 msgid "Volume Mute"
 msgstr "Muto"
 
-#: src/module/e_mod_main.c:455
+#: src/module/e_mod_main.c:498
 msgid "Advanced"
 msgstr "Avanzate"

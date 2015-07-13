@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enlightenment\n"
 "Report-Msgid-Bugs-To: flavio.ceolin@gmail.com\n"
-"POT-Creation-Date: 2015-02-05 11:32+0900\n"
+"POT-Creation-Date: 2015-07-12 20:38-0500\n"
 "PO-Revision-Date: 2015-01-31 10:27+0100\n"
 "Last-Translator: Саша Петровић <salepetronije@gmail.com>\n"
 "Language-Team: српски <xfce4@xfce4.org>\n"
@@ -38,7 +38,7 @@ msgid "Inputs"
 msgstr "Улази"
 
 #: src/bin/playbacks_view.c:305 src/bin/sinks_view.c:263
-#: src/module/e_mod_main.c:414
+#: src/module/e_mod_main.c:451
 msgid "Mute"
 msgstr "Искључи звук"
 
@@ -46,38 +46,39 @@ msgstr "Искључи звук"
 msgid "Unmute"
 msgstr "Укључи звук"
 
-#: src/module/e_mod_main.c:107
+#: src/module/e_mod_main.c:108
 msgid "New volume"
 msgstr "Нова гласноћа"
 
-#: src/module/e_mod_main.c:120
+#: src/module/e_mod_main.c:126
 msgid "EPulse"
 msgstr "Е-било"
 
-#: src/module/e_mod_main.c:123
-msgid "Volume changed"
+#: src/module/e_mod_main.c:129
+#, fuzzy
+msgid "Volume Changed"
 msgstr "Гласноћа је промењена"
 
-#: src/module/e_mod_main.c:219
+#: src/module/e_mod_main.c:229
 msgid "Increase Volume"
 msgstr "Појачај гласноћу"
 
-#: src/module/e_mod_main.c:227
+#: src/module/e_mod_main.c:237
 msgid "Decrease Volume"
 msgstr "Смањи јачину звука"
 
-#: src/module/e_mod_main.c:235
+#: src/module/e_mod_main.c:245
 msgid "Mute volume"
 msgstr "Искључи звук"
 
-#: src/module/e_mod_main.c:248
+#: src/module/e_mod_main.c:263
 msgid "Volume Increase"
 msgstr "Појачање звука"
 
-#: src/module/e_mod_main.c:255 src/module/e_mod_main.c:262
+#: src/module/e_mod_main.c:270 src/module/e_mod_main.c:277
 msgid "Volume Mute"
 msgstr "Звук је искључен"
 
-#: src/module/e_mod_main.c:455
+#: src/module/e_mod_main.c:498
 msgid "Advanced"
 msgstr "Напредно"
