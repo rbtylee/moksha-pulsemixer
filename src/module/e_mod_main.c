@@ -4,6 +4,7 @@
 #include <Eina.h>
 #include <epulse.h>
 #include "e_mod_main.h"
+#include <Elementary.h>
 #ifdef HAVE_ENOTIFY
 #include <E_Notify.h>
 #endif
@@ -27,6 +28,8 @@ static const char      *_gc_label(const E_Gadcon_Client_Class *client_class);
 static Evas_Object     *_gc_icon(const E_Gadcon_Client_Class *client_class,
                                  Evas *evas);
 static const char      *_gc_id_new(const E_Gadcon_Client_Class *client_class);
+
+static Eina_Bool gadman_locked;
 
 static const E_Gadcon_Client_Class _gadcon_class =
    {
@@ -90,11 +93,11 @@ struct _Instance
 
 static Context *mixer_context = NULL;
 
-static void
+/*static void
 _notify_cb(void *data EINA_UNUSED, unsigned int id)
 {
    mixer_context->notification_id = id;
-}
+}*/
 
 static void
 _notify(const int val)
@@ -125,6 +128,10 @@ _notify(const int val)
    e_notification_replaces_id_set(n, EINA_TRUE);
    e_notification_send(n, NULL, NULL);
    e_notification_unref(n);
+   
+   /*elm_sys_notify_send(0, icon, _("Volume Changed"), buf,
+                       ELM_SYS_NOTIFY_URGENCY_NORMAL,
+                       -1, "", "");*/
 #endif
 }
 
@@ -298,18 +305,6 @@ _popup_del_cb(void *obj)
    _popup_del(e_object_data_get(obj));
 }
 
-static void
-_popup_comp_del_cb(void *data, Evas_Object *obj EINA_UNUSED)
-{
-   Instance *inst = data;
-
-#ifdef E_VERSION_MAJOR
-   E_FREE_FUNC(inst->popup, e_object_del);
-#else
-   E_FN_DEL(e_object_del, inst->popup);
-#endif
-}
-
 static Eina_Bool
 _epulse_del_cb(void *data EINA_UNUSED, int type EINA_UNUSED,
                void *info EINA_UNUSED)
@@ -455,10 +450,7 @@ _popup_new(Instance *inst)
    e_widget_size_min_set(list, 208, mh);
 
    e_gadcon_popup_content_set(inst->popup, list);
-#ifdef E_VERSION_MAJOR
-   e_comp_object_util_autoclose(inst->popup->comp_object,
-     _popup_comp_del_cb, NULL, inst);
-#endif
+
    e_gadcon_popup_show(inst->popup);
    e_object_data_set(E_OBJECT(inst->popup), inst);
    E_OBJECT_DEL_SET(inst->popup, _popup_del_cb);
@@ -547,6 +539,8 @@ _gc_init(E_Gadcon *gc, const char *name, const char *id, const char *style)
 {
    E_Gadcon_Client *gcc;
    Instance *inst;
+
+   gadman_locked = e_module_loading_get();
 
    inst = E_NEW(Instance, 1);
 
@@ -801,10 +795,10 @@ _sink_changed_cb(void *data EINA_UNUSED, int type EINA_UNUSED,
                   e_module_dir_get(mixer_context->module));
          mixer_context->theme = strdup(buf);
       }
-
-/*#ifdef HAVE_ENOTIFY
-   e_notification_init();
-#endif*/
+      
+    #ifdef HAVE_ENOTIFY
+        e_notification_init();
+    #endif
 
     e_gadcon_provider_register(&_gadcon_class);
     _actions_register();
@@ -839,10 +833,9 @@ _sink_changed_cb(void *data EINA_UNUSED, int type EINA_UNUSED,
         E_FREE(mixer_context);
      }
 
-/*#ifdef HAVE_ENOTIFY
-   e_notification_shutdown();
-#endif*/
-
+    #ifdef HAVE_ENOTIFY
+       e_notification_shutdown();
+    #endif
    epulse_common_shutdown();
    epulse_shutdown();
    return 1;
