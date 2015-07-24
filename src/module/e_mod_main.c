@@ -123,10 +123,10 @@ _notify(const int val)
    else
      icon = "audio-volume-high";
 
-   n = e_notification_full_new(_("EPulse"), 0, icon, _("Volume Changed"), buf, 2000);
+   /*n = e_notification_full_new(_("EPulse"), 0, icon, _("Volume Changed"), buf, 2000);
    e_notification_replaces_id_set(n, EINA_TRUE);
    e_notification_send(n, NULL, NULL);
-   e_notification_unref(n);
+   e_notification_unref(n);*/
    
    /*elm_sys_notify_send(0, icon, _("Volume Changed"), buf,
                        ELM_SYS_NOTIFY_URGENCY_NORMAL,
@@ -795,9 +795,9 @@ _sink_changed_cb(void *data EINA_UNUSED, int type EINA_UNUSED,
          mixer_context->theme = strdup(buf);
       }
       
-    #ifdef HAVE_ENOTIFY
+    /*#ifdef HAVE_ENOTIFY
         e_notification_init();
-    #endif
+    #endif*/
 
     e_gadcon_provider_register(&_gadcon_class);
     _actions_register();
@@ -832,9 +832,9 @@ _sink_changed_cb(void *data EINA_UNUSED, int type EINA_UNUSED,
         E_FREE(mixer_context);
      }
 
-    #ifdef HAVE_ENOTIFY
+    /*#ifdef HAVE_ENOTIFY
        e_notification_shutdown();
-    #endif
+    #endif*/
    epulse_common_shutdown();
    epulse_shutdown();
    return 1;
