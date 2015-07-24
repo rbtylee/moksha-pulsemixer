@@ -1,13 +1,12 @@
 #include <common.h>
-
 #include <e.h>
 #include <Eina.h>
 #include <epulse.h>
 #include "e_mod_main.h"
-#include <Elementary.h>
 #ifdef HAVE_ENOTIFY
 #include <E_Notify.h>
 #endif
+
 
 #define VOLUME_STEP (PA_VOLUME_NORM / BASE_VOLUME_STEP)
 
