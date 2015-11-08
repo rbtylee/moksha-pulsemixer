@@ -1,11 +1,12 @@
 #include <common.h>
 #include <e.h>
 #include <Eina.h>
+#include <Ecore.h>
 #include <epulse.h>
 #include "e_mod_main.h"
-#ifdef HAVE_ENOTIFY
+/*#ifdef HAVE_ENOTIFY
 #include <E_Notify.h>
-#endif
+#endif*/
 
 
 #define VOLUME_STEP (PA_VOLUME_NORM / BASE_VOLUME_STEP)
@@ -92,23 +93,15 @@ struct _Instance
 
 static Context *mixer_context = NULL;
 
-/*static void
-_notify_cb(void *data EINA_UNUSED, unsigned int id)
-{
-   mixer_context->notification_id = id;
-}*/
-
 static void
 _notify(const int val)
 {
-#ifdef HAVE_ENOTIFY
-   E_Notification *n;
-   
    if (val > 100 || val < 0)
      return;
 
    char *icon, buf[56];
    int ret;
+   char cmd[200];
 
    ret = snprintf(buf, (sizeof(buf) - 1), "%s: %d%%", _("New volume"), val);
    if ((ret < 0) || ((unsigned int)ret > sizeof(buf)))
@@ -123,15 +116,13 @@ _notify(const int val)
    else
      icon = "audio-volume-high";
 
-   /*n = e_notification_full_new(_("EPulse"), 0, icon, _("Volume Changed"), buf, 2000);
-   e_notification_replaces_id_set(n, EINA_TRUE);
-   e_notification_send(n, NULL, NULL);
-   e_notification_unref(n);*/
-   
-   /*elm_sys_notify_send(0, icon, _("Volume Changed"), buf,
-                       ELM_SYS_NOTIFY_URGENCY_NORMAL,
-                       -1, "", "");*/
-#endif
+   snprintf(cmd, 200, "notify-send --expire-time=1500 --icon=%s 'Level %d' 'Volume Changed.'", icon, val);
+
+   ecore_init();
+
+   ecore_exe_run(cmd, NULL);
+
+   ecore_shutdown();
 }
 
 static void
@@ -794,10 +785,6 @@ _sink_changed_cb(void *data EINA_UNUSED, int type EINA_UNUSED,
                   e_module_dir_get(mixer_context->module));
          mixer_context->theme = strdup(buf);
       }
-      
-    /*#ifdef HAVE_ENOTIFY
-        e_notification_init();
-    #endif*/
 
     e_gadcon_provider_register(&_gadcon_class);
     _actions_register();
@@ -831,10 +818,6 @@ _sink_changed_cb(void *data EINA_UNUSED, int type EINA_UNUSED,
 
         E_FREE(mixer_context);
      }
-
-    /*#ifdef HAVE_ENOTIFY
-       e_notification_shutdown();
-    #endif*/
    epulse_common_shutdown();
    epulse_shutdown();
    return 1;
