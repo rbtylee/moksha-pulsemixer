@@ -3,7 +3,7 @@
 #include <Eina.h>
 #include <Ecore.h>
 #include <epulse.h>
-
+#include "e_mod_main.h"
 
 /*#ifdef HAVE_ENOTIFY
 #include <E_Notify.h>
@@ -142,9 +142,7 @@ _notify(const int val)
    snprintf(cmd, 200, "notify-send --expire-time=1500 --icon=%s 'Level %d' 'Volume Changed.'", icon, val);
 
    ecore_init();
-//~ 
    ecore_exe_run(cmd, NULL);
-//~ 
    ecore_shutdown();
 }
 
