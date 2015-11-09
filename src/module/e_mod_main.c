@@ -3,7 +3,8 @@
 #include <Eina.h>
 #include <Ecore.h>
 #include <epulse.h>
-#include "e_mod_main.h"
+
+
 /*#ifdef HAVE_ENOTIFY
 #include <E_Notify.h>
 #endif*/
@@ -28,6 +29,7 @@ static const char      *_gc_label(const E_Gadcon_Client_Class *client_class);
 static Evas_Object     *_gc_icon(const E_Gadcon_Client_Class *client_class,
                                  Evas *evas);
 static const char      *_gc_id_new(const E_Gadcon_Client_Class *client_class);
+
 
 static Eina_Bool gadman_locked;
 
@@ -87,10 +89,31 @@ struct _Instance
    Evas_Object *list;
    Evas_Object *slider;
    Evas_Object *check;
+	Ecore_Timer *popup_timer;   
 
    int mute;
+   
+    struct
+   {
+      Evas_Object *gadget;
+      Evas_Object *label;
+      Evas_Object *left;
+      Evas_Object *right;
+      Evas_Object *mute;
+      Evas_Object *table;
+      Evas_Object *button;
+      struct
+      {
+         Ecore_X_Window win;
+         Ecore_Event_Handler *mouse_up;
+         Ecore_Event_Handler *key_down;
+      } input;
+   } ui;
+
 };
 
+static void				_mixer_popup_input_window_create(Instance *inst);
+static void				_mixer_popup_input_window_destroy(Instance *inst);
 static Context *mixer_context = NULL;
 
 static void
@@ -119,9 +142,9 @@ _notify(const int val)
    snprintf(cmd, 200, "notify-send --expire-time=1500 --icon=%s 'Level %d' 'Volume Changed.'", icon, val);
 
    ecore_init();
-
+//~ 
    ecore_exe_run(cmd, NULL);
-
+//~ 
    ecore_shutdown();
 }
 
@@ -312,6 +335,7 @@ _epulse_exec_cb(void *data, void *data2 EINA_UNUSED)
    Instance *inst = data;
 
    _popup_del(inst);
+   _mixer_popup_input_window_destroy(inst);
    if (mixer_context->epulse)
       return;
 
@@ -444,6 +468,7 @@ _popup_new(Instance *inst)
    e_gadcon_popup_show(inst->popup);
    e_object_data_set(E_OBJECT(inst->popup), inst);
    E_OBJECT_DEL_SET(inst->popup, _popup_del_cb);
+   _mixer_popup_input_window_create(inst);
 }
 
 static void
@@ -827,4 +852,78 @@ EAPI int
 e_modapi_save(E_Module *m EINA_UNUSED)
 {
    return 1;
+}
+
+
+static void _mixer_popup_del(Instance *inst);
+
+static Eina_Bool
+_mixer_popup_input_window_mouse_up_cb(void *data, int type __UNUSED__, void *event)
+{
+   Ecore_Event_Mouse_Button *ev = event;
+   Instance *inst = data;
+
+   if (ev->window != inst->ui.input.win)
+     return ECORE_CALLBACK_PASS_ON;
+
+   _mixer_popup_del(inst);
+
+   return ECORE_CALLBACK_PASS_ON;
+}
+
+static void
+_mixer_popup_input_window_destroy(Instance *inst)
+{
+   e_grabinput_release(0, inst->ui.input.win);
+   ecore_x_window_free(inst->ui.input.win);
+   inst->ui.input.win = 0;
+
+   ecore_event_handler_del(inst->ui.input.mouse_up);
+   inst->ui.input.mouse_up = NULL;
+
+   ecore_event_handler_del(inst->ui.input.key_down);
+   inst->ui.input.key_down = NULL;
+}
+
+static void
+_mixer_popup_input_window_create(Instance *inst)
+{
+   Ecore_X_Window_Configure_Mask mask;
+   Ecore_X_Window w, popup_w;
+   E_Manager *man;
+
+   man = e_manager_current_get();
+
+   w = ecore_x_window_input_new(man->root, 0, 0, man->w, man->h);
+   mask = (ECORE_X_WINDOW_CONFIGURE_MASK_STACK_MODE |
+           ECORE_X_WINDOW_CONFIGURE_MASK_SIBLING);
+   popup_w = inst->popup->win->evas_win;
+   ecore_x_window_configure(w, mask, 0, 0, 0, 0, 0, popup_w,
+                            ECORE_X_WINDOW_STACK_BELOW);
+   ecore_x_window_show(w);
+
+   inst->ui.input.mouse_up =
+     ecore_event_handler_add(ECORE_EVENT_MOUSE_BUTTON_UP,
+                             _mixer_popup_input_window_mouse_up_cb, inst);
+
+     inst->ui.input.win = w;
+   e_grabinput_get(0, 0, inst->ui.input.win);
+}
+
+
+static void
+_mixer_popup_del(Instance *inst)
+{
+   _mixer_popup_input_window_destroy(inst);
+   e_object_del(E_OBJECT(inst->popup));
+   inst->ui.label = NULL;
+   inst->ui.left = NULL;
+   inst->ui.right = NULL;
+   inst->ui.mute = NULL;
+   inst->ui.table = NULL;
+   inst->ui.button = NULL;
+   inst->popup = NULL;
+   if (inst->popup_timer)
+     ecore_timer_del(inst->popup_timer);
+   inst->popup_timer = NULL;
 }
