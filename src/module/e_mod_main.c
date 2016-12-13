@@ -10,7 +10,8 @@
 #endif*/
 
 
-#define VOLUME_STEP (PA_VOLUME_NORM / BASE_VOLUME_STEP)
+//~ #define VOLUME_STEP (PA_VOLUME_NORM / BASE_VOLUME_STEP)
+#define VOLUME_STEP (PA_VOLUME_NORM / 100 * 5) // volume step set up to 5%
 
 /* module requirements */
 EAPI E_Module_Api e_modapi =
@@ -199,7 +200,6 @@ _volume_increase_cb(E_Object *obj EINA_UNUSED, const char *params EINA_UNUSED)
    Sink *s = mixer_context->sink_default;
    pa_cvolume v = s->volume;
    pa_cvolume_inc(&v, VOLUME_STEP);
-
    epulse_sink_volume_set(s->index, v);
 }
 
