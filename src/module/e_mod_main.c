@@ -140,7 +140,7 @@ _notify(const int val)
    else
      icon = "audio-volume-high";
 
-   snprintf(cmd, 200, "notify-send --expire-time=1500 --icon=%s 'Level %d' 'Volume Changed.'", icon, val);
+   snprintf(cmd, 200, "notify-send --expire-time=1500 --icon=%s 'Volume Changed.' 'Level %d'", icon, val);
 
    ecore_init();
    ecore_exe_run(cmd, NULL);
