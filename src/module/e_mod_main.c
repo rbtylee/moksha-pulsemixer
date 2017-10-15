@@ -108,6 +108,7 @@ struct _Instance
          Ecore_X_Window win;
          Ecore_Event_Handler *mouse_up;
          Ecore_Event_Handler *key_down;
+         Ecore_Event_Handler *wheel;
       } input;
    } ui;
 
@@ -881,6 +882,9 @@ _mixer_popup_input_window_destroy(Instance *inst)
 
    ecore_event_handler_del(inst->ui.input.key_down);
    inst->ui.input.key_down = NULL;
+   
+   ecore_event_handler_del(inst->ui.input.wheel);
+   inst->ui.input.wheel = NULL;
 }
 
 static void
@@ -902,6 +906,9 @@ _mixer_popup_input_window_create(Instance *inst)
 
    inst->ui.input.mouse_up =
      ecore_event_handler_add(ECORE_EVENT_MOUSE_BUTTON_UP,
+                             _mixer_popup_input_window_mouse_up_cb, inst);
+   inst->ui.input.wheel =
+     ecore_event_handler_add(ECORE_EVENT_MOUSE_WHEEL,
                              _mixer_popup_input_window_mouse_up_cb, inst);
 
      inst->ui.input.win = w;
