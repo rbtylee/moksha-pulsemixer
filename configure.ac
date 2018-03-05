@@ -63,11 +63,7 @@ fi
 AC_SUBST([ENOTIFY_CFLAGS])
 AC_SUBST([ENOTIFY_LIBS])
 
-PKG_CHECK_MODULES(E,
-	[enlightenment >= 0.18 enlightenment < 0.19],
-	[AC_DEFINE([E_VERSION_MAJOR], [18], [Have exactly E18])],
-	[PKG_CHECK_MODULES(E, [enlightenment >= 0.1])]
-)
+PKG_CHECK_MODULES(E, [enlightenment])
 
 PKG_CHECK_MODULES([PULSE],
 	[
