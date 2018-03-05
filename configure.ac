@@ -1,7 +1,7 @@
 AC_PREREQ([2.69])
 AC_INIT([epulse], [0.1], [moksha@bodhilinux.com])
 
-AM_INIT_AUTOMAKE([foreign subdir-objects])
+AM_INIT_AUTOMAKE([-Wno-portability foreign subdir-objects])
 AC_CONFIG_HEADER([config.h])
 AC_CONFIG_MACRO_DIR([m4])
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
