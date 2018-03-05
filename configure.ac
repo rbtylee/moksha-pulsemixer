@@ -1,5 +1,5 @@
 AC_PREREQ([2.69])
-AC_INIT([epulse], [0.1], [flavio.ceolin@gmail.com])
+AC_INIT([epulse], [0.1], [moksha@bodhilinux.com])
 
 AM_INIT_AUTOMAKE([foreign subdir-objects])
 AC_CONFIG_HEADER([config.h])
