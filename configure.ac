@@ -48,7 +48,7 @@ AC_ARG_ENABLE([enotify],
   AC_CACHE_VAL([e_cv_want_enotify], [e_cv_want_enotify=yes])
 )
 if test "x$e_cv_want_enotify" != "xno" ; then
-  PKG_CHECK_MODULES(ENOTIFY, [ edbus ],
+  PKG_CHECK_MODULES(ENOTIFY, [ edbus enotify],
   [
     AC_DEFINE_UNQUOTED([HAVE_ENOTIFY], [1], [enable enotify])
   ],
