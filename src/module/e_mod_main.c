@@ -18,7 +18,7 @@ EAPI E_Module_Api e_modapi =
       "Pulse Mixer"
    };
 
-/* necessary forward delcaration */
+/* necessary forward declaration */
 static E_Gadcon_Client *_gc_init(E_Gadcon *gc, const char *name,
                                  const char *id, const char *style);
 static void             _gc_shutdown(E_Gadcon_Client *gcc);
@@ -30,7 +30,6 @@ static Evas_Object     *_gc_icon(const E_Gadcon_Client_Class *client_class,
 static const char      *_gc_id_new(const E_Gadcon_Client_Class *client_class);
 static                 E_Module *epulse_module = NULL;
 
-static Eina_Bool gadman_locked;
 
 static const E_Gadcon_Client_Class _gadcon_class =
    {
@@ -553,8 +552,6 @@ _gc_init(E_Gadcon *gc, const char *name, const char *id, const char *style)
    E_Gadcon_Client *gcc;
    Instance *inst;
 
-   //gadman_locked = e_module_loading_get();
-
    inst = E_NEW(Instance, 1);
 
    inst->gadget = edje_object_add(gc->evas);
@@ -812,7 +809,6 @@ _sink_changed_cb(void *data EINA_UNUSED, int type EINA_UNUSED,
                   e_module_dir_get(mixer_context->module));
          mixer_context->theme = strdup(buf);
       }
-    e_module_delayed_set(m, 3);
     e_gadcon_provider_register(&_gadcon_class);
     _actions_register();
 
