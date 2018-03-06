@@ -1,0 +1,4 @@
+moksha-pulsemixer: package-name-doesnt-match-sonames
+moksha-pulsemixer: binary-without-manpage
+moksha-pulsemixer: non-empty-dependency_libs-in-la-file
+moksha-pulsemixer: shlib-without-versioned-soname
