@@ -1,7 +1,7 @@
-ppAC_PREREQ([2.69])
-AC_INIT([epulse], [0.1], [flavio.ceolin@gmail.com])
+AC_PREREQ([2.69])
+AC_INIT([epulse], [0.1], [moksha@bodhilinux.com])
 
-AM_INIT_AUTOMAKE([foreign subdir-objects])
+AM_INIT_AUTOMAKE([-Wno-portability foreign subdir-objects])
 AC_CONFIG_HEADER([config.h])
 AC_CONFIG_MACRO_DIR([m4])
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
@@ -41,14 +41,14 @@ PKG_CHECK_MODULES([EFL],
 	 ])
 
 have_enotify=no
-AM_CONDITIONAL([HAVE_ENOTIFY], [false])
+AM_CONDITIONAL([HAVE_ENOTIFY], [true])
 AC_ARG_ENABLE([enotify],
   AC_HELP_STRING([--disable-enotify], [disable Enotify support @<:@default=detect@:>@]),
   [e_cv_want_enotify=$enableval],
   AC_CACHE_VAL([e_cv_want_enotify], [e_cv_want_enotify=yes])
 )
 if test "x$e_cv_want_enotify" != "xno" ; then
-  PKG_CHECK_MODULES(ENOTIFY, [ edbus ],
+  PKG_CHECK_MODULES(ENOTIFY, [edbus enotify],
   [
     AC_DEFINE_UNQUOTED([HAVE_ENOTIFY], [1], [enable enotify])
   ],
@@ -63,11 +63,7 @@ fi
 AC_SUBST([ENOTIFY_CFLAGS])
 AC_SUBST([ENOTIFY_LIBS])
 
-PKG_CHECK_MODULES(E,
-	[enlightenment >= 0.18 enlightenment < 0.19],
-	[AC_DEFINE([E_VERSION_MAJOR], [18], [Have exactly E18])],
-	[PKG_CHECK_MODULES(E, [enlightenment >= 0.1])]
-)
+PKG_CHECK_MODULES(E, [enlightenment])
 
 PKG_CHECK_MODULES([PULSE],
 	[
@@ -76,7 +72,7 @@ PKG_CHECK_MODULES([PULSE],
 	 ])
 
 release=$(pkg-config --variable=release enlightenment)
-MODULE_ARCH="$host_os-$host_cpu-$release"
+MODULE_ARCH="$host_os-$host_cpu"
 AC_SUBST(MODULE_ARCH)
 AC_DEFINE_UNQUOTED(MODULE_ARCH, "$MODULE_ARCH", "Module architecture")
 AC_DEFINE_UNQUOTED(MODULE_VERSION, "$VERSION", "Module version")

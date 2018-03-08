@@ -1,5 +1,6 @@
 ACLOCAL_AMFLAGS = -I m4
 AM_MAKEFLAGS = --no-print-directory
+
 AM_CFLAGS = \
 	-DPACKAGE_DATA_DIR=\"$(pkgdatadir)/\" \
 	-DPACKAGE_BIN_DIR=\"$(bindir)\" \
@@ -8,6 +9,8 @@ AM_CFLAGS = \
 	@EFL_CFLAGS@ \
 	@E_CFLAGS@ \
 	@PULSE_CFLAGS@
+
+src_module_module_la_CFLAGS= $(AM_CFLAGS)
 
 MAINTAINERCLEANFILES = \
 	aclocal.m4 \
@@ -73,6 +76,7 @@ src_module_module_la_LIBADD = \
 src_module_module_la_LDFLAGS = -module -avoid-version
 
 if HAVE_ENOTIFY
+src_module_module_la_CFLAGS += @ENOTIFY_CFLAGS@
 src_module_module_la_LIBADD += @ENOTIFY_LIBS@
 endif
 

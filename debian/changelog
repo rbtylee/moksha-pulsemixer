@@ -1,0 +1,11 @@
+moksha-pulsemixer (20180306bodhi1-1) unstable; urgency=medium
+
+  * e_notify fix
+
+ -- Robert Wiley <ylee@bodhilinux.com>  Tue, 06 Mar 2018 12:41:49 -0500
+
+moksha-pulsemixer (20161214bodhi1-1) unstable; urgency=low
+
+  * Initial release
+
+ -- Jeff Hoogland <jeffhoogland@linux.com>  Tue, 07 Apr 2015 15:22:08 +0000

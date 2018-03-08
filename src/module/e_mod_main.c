@@ -4,11 +4,9 @@
 #include <Ecore.h>
 #include <epulse.h>
 #include "e_mod_main.h"
-
-/*#ifdef HAVE_ENOTIFY
+#ifdef HAVE_ENOTIFY
 #include <E_Notify.h>
-#endif*/
-
+#endif
 
 //~ #define VOLUME_STEP (PA_VOLUME_NORM / BASE_VOLUME_STEP)
 #define VOLUME_STEP (PA_VOLUME_NORM / 100 * 5) // volume step set up to 5%
@@ -20,7 +18,7 @@ EAPI E_Module_Api e_modapi =
       "Pulse Mixer"
    };
 
-/* necessary forward delcaration */
+/* necessary forward declaration */
 static E_Gadcon_Client *_gc_init(E_Gadcon *gc, const char *name,
                                  const char *id, const char *style);
 static void             _gc_shutdown(E_Gadcon_Client *gcc);
@@ -30,9 +28,8 @@ static const char      *_gc_label(const E_Gadcon_Client_Class *client_class);
 static Evas_Object     *_gc_icon(const E_Gadcon_Client_Class *client_class,
                                  Evas *evas);
 static const char      *_gc_id_new(const E_Gadcon_Client_Class *client_class);
+static                 E_Module *epulse_module = NULL;
 
-
-static Eina_Bool gadman_locked;
 
 static const E_Gadcon_Client_Class _gadcon_class =
    {
@@ -123,10 +120,10 @@ _notify(const int val)
 {
    if (val > 100 || val < 0)
      return;
-
+#ifdef HAVE_ENOTIFY
+   static E_Notification *n;
    char *icon, buf[56];
    int ret;
-   char cmd[200];
 
    ret = snprintf(buf, (sizeof(buf) - 1), "%s: %d%%", _("New volume"), val);
    if ((ret < 0) || ((unsigned int)ret > sizeof(buf)))
@@ -140,12 +137,13 @@ _notify(const int val)
      icon = "audio-volume-low";
    else
      icon = "audio-volume-high";
-
-   snprintf(cmd, 200, "notify-send --expire-time=1500 --icon=%s 'Volume Changed.' 'Level %d'", icon, val);
-
-   ecore_init();
-   ecore_exe_run(cmd, NULL);
-   ecore_shutdown();
+   if (n) return;
+   n = e_notification_full_new(_("EPulse"), 0, icon, _("Volume Changed"), buf, 2000);
+   e_notification_replaces_id_set(n, EINA_TRUE);
+   e_notification_send(n, NULL, NULL);
+   e_notification_unref(n);
+   n = NULL;
+#endif
 }
 
 static void
@@ -554,8 +552,6 @@ _gc_init(E_Gadcon *gc, const char *name, const char *id, const char *style)
    E_Gadcon_Client *gcc;
    Instance *inst;
 
-   gadman_locked = e_module_loading_get();
-
    inst = E_NEW(Instance, 1);
 
    inst->gadget = edje_object_add(gc->evas);
@@ -786,7 +782,11 @@ _sink_changed_cb(void *data EINA_UNUSED, int type EINA_UNUSED,
  e_modapi_init(E_Module *m)
  {
     char buf[4096];
-
+    printf("Load module");
+    epulse_module = m;
+#ifdef HAVE_ENOTIFY
+   e_notification_init();
+#endif
     EINA_SAFETY_ON_FALSE_RETURN_VAL(epulse_common_init("epulse_mod"),
                                     NULL);
     EINA_SAFETY_ON_FALSE_RETURN_VAL(epulse_init() > 0, NULL);
@@ -809,7 +809,6 @@ _sink_changed_cb(void *data EINA_UNUSED, int type EINA_UNUSED,
                   e_module_dir_get(mixer_context->module));
          mixer_context->theme = strdup(buf);
       }
-
     e_gadcon_provider_register(&_gadcon_class);
     _actions_register();
 
@@ -820,7 +819,8 @@ _sink_changed_cb(void *data EINA_UNUSED, int type EINA_UNUSED,
  e_modapi_shutdown(E_Module *m EINA_UNUSED)
  {
     Sink *s;
-
+    epulse_module = NULL;
+    printf("Unload module");
     _actions_unregister();
     e_gadcon_provider_unregister((const E_Gadcon_Client_Class *)&_gadcon_class);
 
@@ -842,6 +842,9 @@ _sink_changed_cb(void *data EINA_UNUSED, int type EINA_UNUSED,
 
         E_FREE(mixer_context);
      }
+#ifdef HAVE_ENOTIFY
+   e_notification_shutdown();
+#endif
    epulse_common_shutdown();
    epulse_shutdown();
    return 1;
