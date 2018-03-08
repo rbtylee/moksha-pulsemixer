@@ -41,14 +41,14 @@ PKG_CHECK_MODULES([EFL],
 	 ])
 
 have_enotify=no
-AM_CONDITIONAL([HAVE_ENOTIFY], [false])
+AM_CONDITIONAL([HAVE_ENOTIFY], [true])
 AC_ARG_ENABLE([enotify],
   AC_HELP_STRING([--disable-enotify], [disable Enotify support @<:@default=detect@:>@]),
   [e_cv_want_enotify=$enableval],
   AC_CACHE_VAL([e_cv_want_enotify], [e_cv_want_enotify=yes])
 )
 if test "x$e_cv_want_enotify" != "xno" ; then
-  PKG_CHECK_MODULES(ENOTIFY, [ edbus enotify],
+  PKG_CHECK_MODULES(ENOTIFY, [edbus enotify],
   [
     AC_DEFINE_UNQUOTED([HAVE_ENOTIFY], [1], [enable enotify])
   ],

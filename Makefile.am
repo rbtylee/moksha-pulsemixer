@@ -1,6 +1,6 @@
 ACLOCAL_AMFLAGS = -I m4
 AM_MAKEFLAGS = --no-print-directory
-AM_LDFLAGS = -module -avoid-version
+
 AM_CFLAGS = \
 	-DPACKAGE_DATA_DIR=\"$(pkgdatadir)/\" \
 	-DPACKAGE_BIN_DIR=\"$(bindir)\" \
