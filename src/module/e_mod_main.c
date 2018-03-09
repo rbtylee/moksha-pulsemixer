@@ -118,7 +118,7 @@ static Context *mixer_context = NULL;
 static void
 _notify(const int val)
 {
-   if (val > 100 || val < 0)
+   if (val < 0)
      return;
 #ifdef HAVE_ENOTIFY
    static E_Notification *n;
